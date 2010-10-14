@@ -5,7 +5,7 @@
 # required runtime files by Patus.
 #
 
-CC = icc
+CC = gcc
 CFLAGS = -O3 -openmp
 
 bench: kernel.o driver.o timer.o

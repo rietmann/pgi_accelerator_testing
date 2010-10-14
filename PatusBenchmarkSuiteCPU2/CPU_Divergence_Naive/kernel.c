@@ -58,12 +58,13 @@ void divergence(float *  *  u_0_0_out, float *  u_0_0, float *  ux_1_0, float * 
 						_idx4=((_idx3+((2*x_max)*y_max))-((2*p_idx_z)*x_max));
 						/* _idx5 = ((((p_idx_z*x_max)*y_max)+(p_idx_y*x_max))+p_idx_x) */
 						_idx5=(_idx3-((2*p_idx_z)*x_max));
-						u__u_0[0][_idx5]=((alpha*(u__ux_1[0][_idx0]-u__ux_1[0][_idx1]))+((beta*(u__uy_2[0][_idx2]-u__uy_2[0][_idx3]))+(gamma*(u__uz_3[0][_idx4]-u__uz_3[0][_idx5]))));
+						u_0_0[_idx5]=((alpha*(ux_1_0[_idx0]-ux_1_0[_idx1]))+((beta*(uy_2_0[_idx2]-uy_2_0[_idx3]))+(gamma*(uz_3_0[_idx4]-uz_3_0[_idx5]))));
 					}
 				}
 			}
 		}
 	}
+	*u_0_0_out = u_0_0;
 }
 
 void initialize(float *  u_0_0, float *  ux_1_0, float *  uy_2_0, float *  uz_3_0, float alpha, float beta, float gamma, int x_max, int y_max, int z_max)
