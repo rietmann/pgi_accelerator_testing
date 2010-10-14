@@ -1,8 +1,0 @@
-Flops / stencil call:  22
-Stencil computations:  10485760
-Bytes transferred:     189008960
-Total Flops:           230686720
-Seconds elapsed:       0.513592
-Performance:           0.449163 GFlop/s
-Bandwidth utilization: 0.368014 GB/s
-1024607516.000000

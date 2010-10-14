@@ -1,1 +1,0 @@
-java -jar /scratch/julier/chrmat/PatusBenchmarkSuiteCPU/patus.jar qsubautotune /scratch/julier/chrmat/PatusBenchmarkSuiteCPU/CPU_Upstream_Naive//thd4/bench /scratch/julier/chrmat/PatusBenchmarkSuiteCPU/submit-template.job 4 128 128 128 > /scratch/julier/chrmat/PatusBenchmarkSuiteCPU/CPU_Upstream_Naive//thd4/result.txt

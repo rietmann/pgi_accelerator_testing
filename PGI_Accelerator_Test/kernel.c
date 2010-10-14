@@ -2,6 +2,7 @@
 #include "omp.h"
 #define t_max 1
 #define t 1
+#define LOOPCOUNT 100
 /*
   (u[0][0][0][1][0]=((((u[1][0][0][0][0]+(u[-1][0][0][0][0]+u[0][1][0][0][0]))+(u[0][-1][0][0][0]+(u[0][0][1][0][0]+u[0][0][-1][0][0])))*0.25)-u[0][0][0][0][0]))
 */
@@ -44,6 +45,8 @@ void laplacian(float *  *  u_0_1_out, float * u_0_0, float * u_0_1, int x_max, i
 #pragma acc region copyin(u_0_0[0:(x_max+2)*(y_max+2)*(z_max+2)-1]) copyout(u_0_1[0:(x_max+2)*(y_max+2)*(z_max+2)-1])
     {
       /* Index bounds calculations for iterators in p[t=t, s=(1, 1, 1)][0] */
+#pragma acc for seq
+      for(int iter=0;iter<LOOPCOUNT;iter++) {
 #pragma acc for independent
       for (p_idx_z=0; p_idx_z<z_max; p_idx_z+=1)
 	{
@@ -70,6 +73,7 @@ void laplacian(float *  *  u_0_1_out, float * u_0_0, float * u_0_1, int x_max, i
 		}
 	    }
 	}
+      }
     }
   }
   *u_0_1_out = u_0_1;
@@ -110,7 +114,7 @@ void initialize(float *  u_0_0, float *  u_0_1, int x_max, int y_max, int z_max)
     /*
       for POINT p[t=t, s=(1, 1, 1)][0] of size [1, 1, 1] in u[t=t, s=(:, :, :)][0] parallel 1 <level 0> schedule default { ... }
     */
-    {
+     {
       /* Index bounds calculations for iterators in p[t=t, s=(1, 1, 1)][0] */
       for (p_idx_z=0; p_idx_z<z_max; p_idx_z+=1)
 	{
@@ -186,7 +190,7 @@ void laplacian_cpu(float *  *  u_0_1_out, float * u_0_0, float * u_0_1, int x_ma
       for POINT p[t=t, s=(1, 1, 1)][0] of size [1, 1, 1] in u[t=t, s=(:, :, :)][0] parallel 1 <level 0> schedule default { ... }
     */
 		
-    {
+    for (int iter=0;iter<LOOPCOUNT;iter++) {
       /* Index bounds calculations for iterators in p[t=t, s=(1, 1, 1)][0] */
       for (p_idx_z=0; p_idx_z<z_max; p_idx_z+=1)
 	{

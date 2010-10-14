@@ -46,8 +46,8 @@ int main (int argc, char** argv)
 	initialize(u_0_0_test, u_0_1_test, x_max, y_max, z_max);
 	
 	long nFlopsPerStencil = 7;
-	long nGridPointsCount = 5 * ((x_max*y_max)*z_max);
-	long nBytesTransferred = 5 * (((((x_max+4)*(y_max+4))*(z_max+4))*sizeof (float))+(((x_max*y_max)*z_max)*sizeof (float)));
+	long nGridPointsCount = 100*((x_max*y_max)*z_max);
+	long nBytesTransferred = 100*(((((x_max+4)*(y_max+4))*(z_max+4))*sizeof (float))+(((x_max*y_max)*z_max)*sizeof (float)));
 	
 	// warm up
 	// compute_stencil -->
@@ -56,26 +56,26 @@ int main (int argc, char** argv)
 		
 	// run the benchmark
 	tic ();
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < 1; i++)
 	{
 		// compute_stencil -->
 		laplacian(( & u_0_1_out), u_0_0, u_0_1, x_max, y_max, z_max);
 		// <--
 	}
 	toc (nFlopsPerStencil, nGridPointsCount, nBytesTransferred);
-
+	
 	
 	// warm up test
 	// compute_stencil test -->
-	laplacian(( & u_0_1_out_test), u_0_0_test, u_0_1_test, x_max, y_max, z_max);
+	laplacian_cpu(( & u_0_1_out_test), u_0_0_test, u_0_1_test, x_max, y_max, z_max);
 	// <--
 		
 	// run the purely CPU benchmark test
 	tic ();
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < 1; i++)
 	{
 		// compute_stencil -->
-		laplacian(( & u_0_1_out_test), u_0_0_test, u_0_1_test, x_max, y_max, z_max);
+		laplacian_cpu(( & u_0_1_out_test), u_0_0_test, u_0_1_test, x_max, y_max, z_max);
 		// <--
 	}
 	toc (nFlopsPerStencil, nGridPointsCount, nBytesTransferred);
