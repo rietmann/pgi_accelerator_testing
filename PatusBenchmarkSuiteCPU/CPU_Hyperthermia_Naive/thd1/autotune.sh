@@ -1,0 +1,1 @@
+java -jar /scratch/julier/chrmat/PatusBenchmarkSuiteCPU/patus.jar qsubautotune /scratch/julier/chrmat/PatusBenchmarkSuiteCPU/CPU_Hyperthermia_Naive//thd1/bench /scratch/julier/chrmat/PatusBenchmarkSuiteCPU/submit-template.job 1 128 128 128 > /scratch/julier/chrmat/PatusBenchmarkSuiteCPU/CPU_Hyperthermia_Naive//thd1/result.txt

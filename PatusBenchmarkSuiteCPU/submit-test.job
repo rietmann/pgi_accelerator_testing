@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --nodes=1
+##SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=24
+#SBATCH --job-name="patus"
+#SBATCH --time=00:01:00
+#SBATCH --time-min=00:00:10
+#SBATCH --output=/scratch/julier/chrmat/PatusBenchmarkSuiteCPU/%j.o
+#SBATCH --error=/scratch/julier/chrmat/PatusBenchmarkSuiteCPU/%j.e
+#==================== START ====================
+export OMP_NUM_THREADS=6
+export KMP_AFFINITY=compact,verbose
+##srun -n 1 -N 1 -T 12 /scratch/julier/chrmat/PatusBenchmarkSuiteCPU/CPU_Divergence_CacheBlocked/bench 128 128 128 32 32 32 5 
+##/scratch/julier/chrmat/PatusBenchmarkSuiteCPU/CPU_Divergence_CacheBlocked/bench 128 128 128 32 32 32 5 
+srun --cpu_bind=none /scratch/julier/chrmat/PatusBenchmarkSuiteCPU/CPU_Divergence_CacheBlocked/bench 128 128 128 32 32 32 5 
+exit
+#====================  END  ====================

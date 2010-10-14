@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=24
+#SBATCH --job-name="patus"
+#SBATCH --time=00:01:00
+#SBATCH --time-min=00:00:10
+#SBATCH --output=/scratch/julier/chrmat/PatusBenchmarkSuiteCPU/CPU_Laplacian_Naive/thd12/result_128-128-128__12.txt
+#SBATCH --error=/scratch/julier/chrmat/PatusBenchmarkSuiteCPU/CPU_Laplacian_Naive/thd12/result_128-128-128__12.txt.err
+#==================== START ====================
+export OMP_NUM_THREADS=12
+export KMP_AFFINITY=compact,verbose
+/scratch/julier/chrmat/PatusBenchmarkSuiteCPU/CPU_Laplacian_Naive/thd12/bench 128 128 128
+exit
+#====================  END  ====================

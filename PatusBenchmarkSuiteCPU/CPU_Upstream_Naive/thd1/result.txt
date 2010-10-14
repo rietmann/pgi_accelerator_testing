@@ -1,0 +1,15 @@
+20:30:26,556  INFO QsubStandaloneAutotuner:159 - /scratch/julier/chrmat/PatusBenchmarkSuiteCPU/CPU_Upstream_Naive//thd1/bench /scratch/julier/chrmat/PatusBenchmarkSuiteCPU/submit-template.job 1 128 128 128
+20:30:26,566  INFO QsubStandaloneAutotuner:257 - Using optimizer: Powell search method
+20:30:26,580  INFO QsubRunExecutable:78 - qsub found: /apps/ela/slurm/default/bin/qsub
+20:30:26,583  INFO PowellSearchOptimizer:48 - Run 0
+20:30:26,591  INFO QsubRunExecutable:194 - /apps/ela/slurm/default/bin/qsub /scratch/julier/chrmat/PatusBenchmarkSuiteCPU/CPU_Upstream_Naive/thd1/submit_128-128-128__1.job
+20:30:26,661  INFO QsubRunExecutable:204 - Submitted batch job 4303
+20:30:26,663  INFO QsubRunExecutable:204 - 
+20:30:27,672 DEBUG QsubRunExecutable:269 - Reading output file, try 1
+20:30:27,674  INFO QsubRunExecutable:274 - Result: 1.024607516E9
+20:30:27,675  INFO PowellSearchOptimizer:48 - Run 1
+20:30:27,675  INFO PowellSearchOptimizer:48 - Run 2
+20:30:27,675  INFO PowellSearchOptimizer:48 - Run 3
+20:30:27,675  INFO PowellSearchOptimizer:48 - Run 4
+128 128 128 
+1.024607516E9
