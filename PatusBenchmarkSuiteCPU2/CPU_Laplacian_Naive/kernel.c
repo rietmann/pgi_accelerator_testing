@@ -158,7 +158,7 @@ void laplacian_cpu(float *  *  u_0_1_out, float *  u_0_0, float *  u_0_1, int x_
 	*/
 
 	{
-	
+	  int count=0;
 	  for (t=1; t<=t_max; t+=1)
 	    {
 			/* Index bounds calculations for iterators in p[t=t, s=(1, 1, 1)][0] */
@@ -187,6 +187,12 @@ void laplacian_cpu(float *  *  u_0_1_out, float *  u_0_0, float *  u_0_1, int x_
 						/* _idx6 = ((((((((((p_idx_z+1)*x_max)+(2*p_idx_z))+2)*y_max)+((((2*p_idx_z)+p_idx_y)+3)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+7) */
 						_idx6=((_idx3+x_max)+2);
 						u_0_1[_idx6]=((((u_0_0[_idx0]+(u_0_0[_idx1]+u_0_0[_idx2]))+(u_0_0[_idx3]+(u_0_0[_idx4]+u_0_0[_idx5])))*0.25)-u_0_0[_idx6]);
+						
+						if(count<50) {
+						  printf("_idx6=%d\n",_idx6);count++;}
+						if(_idx6 < 10) printf("_idx6=%d<10\n",_idx6);
+						/* printf("u_0_0[_idx0]=%f,u_0_0[_idx2]=%f,u_0_0[_idx1]=%f\n",u_0_0[_idx0],u_0_0[_idx2],u_0_0[_idx1]); */
+						
 					}
 				}
 			}
