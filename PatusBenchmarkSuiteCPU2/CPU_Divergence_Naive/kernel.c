@@ -33,7 +33,7 @@ void divergence(float *  *  u_0_0_out, float *  u_0_0, float *  ux_1_0, float * 
 #pragma acc region copyin(ux_1_0[0:(x_max*y_max*z_max)],uy_2_0[0:(x_max*y_max*z_max)],uz_3_0[0:(x_max*y_max*z_max)]) copyout(u_0_0[0:(x_max*y_max*z_max)])
   {
 #pragma acc for seq 
-    for (t=0; t<=t_max; t++)
+    for (t=1; t<=t_max; t++)
       {
 #pragma acc for independent
 	for (p_idx_z=0; p_idx_z<z_max; p_idx_z+=1)
@@ -153,7 +153,7 @@ void divergence_cpu(float *  *  u_0_0_out, float *  u_0_0, float *  ux_1_0, floa
 	for t = 1..t_max by 1 parallel 1 <level 0> schedule  { ... }
 	*/
 	
-	  for (t=0; t<=t_max; t++)
+	  for (t=1; t<=t_max; t++)
 	    {
 	      for (p_idx_z=0; p_idx_z<z_max; p_idx_z+=1)
 		{

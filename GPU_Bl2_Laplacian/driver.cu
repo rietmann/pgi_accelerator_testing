@@ -74,8 +74,9 @@ int main (int argc, char** argv)
 	}
 	
 	long nFlopsPerStencil = 7;
-	long nGridPointsCount = 5 * ((x_max*y_max)*z_max);
-	long nBytesTransferred = 5 * (((((x_max+4)*(y_max+4))*(z_max+4))*sizeof (float))+(((x_max*y_max)*z_max)*sizeof (float)));
+	int iterations = 100;
+	long nGridPointsCount = iterations * ((x_max*y_max)*z_max);
+	long nBytesTransferred = iterations * (((((x_max+4)*(y_max+4))*(z_max+4))*sizeof (float))+(((x_max*y_max)*z_max)*sizeof (float)));
 	
 //	cudaFuncSetCacheConfig (laplacian, cudaFuncCachePreferShared);
 	cudaFuncSetCacheConfig (laplacian, cudaFuncCachePreferL1);
@@ -94,7 +95,7 @@ int main (int argc, char** argv)
 	
 	// run the benchmark
 	tic ();
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < iterations; i++)
 	{
 		// compute_stencil -->
 		laplacian<<<blks, thds>>>(( & u_0_1_out_gpu), u_0_0_gpu, u_0_1_gpu, x_max, y_max, z_max, tbx, tby, tbz, c);

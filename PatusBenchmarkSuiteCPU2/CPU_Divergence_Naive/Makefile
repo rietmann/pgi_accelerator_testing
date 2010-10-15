@@ -6,7 +6,7 @@
 #
 
 CC = pgcc 
-CFLAGS = -O3 -ta=nvidia -Minfo
+CFLAGS = -O3 -ta=nvidia -Minfo -lm
 
 bench: kernel.o driver.o timer.o
 	$(CC) $(CFLAGS) -o $@ $+
