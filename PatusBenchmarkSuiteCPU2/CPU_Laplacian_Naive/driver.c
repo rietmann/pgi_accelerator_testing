@@ -47,9 +47,16 @@ int main (int argc, char** argv)
 	// initialize
 
 	// initialize_grids -->
-	initialize(u_0_0, u_0_1, x_max, y_max, z_max);
-	initialize(u_0_0_cpu, u_0_1_cpu, x_max, y_max, z_max);
+	//initialize(u_0_0, u_0_1, x_max, y_max, z_max);
+	//initialize(u_0_0_cpu, u_0_1_cpu, x_max, y_max, z_max);
 	// <--
+	int  j, k;
+	for (i = 0; i<(x_max+2)*(y_max+2)*(z_max+2);i++) {
+	  u_0_0[i] = 1.1;
+	  u_0_1[i] = 1.1;
+	  u_0_0_cpu[i] = 1.1;
+	  u_0_1_cpu[i] = 1.1;
+	}
 	
 	long nFlopsPerStencil = 7;
 	long nGridPointsCount = iterations * ((x_max*y_max)*z_max);
@@ -57,7 +64,7 @@ int main (int argc, char** argv)
 	
 
 	// compute_stencil -->
-	laplacian(( & u_0_1_out), u_0_0, u_0_1, x_max, y_max, z_max,iterations);
+	/* laplacian(( & u_0_1_out), u_0_0, u_0_1, x_max, y_max, z_max,1); */
 	// <--			
 	// run the benchmark
 	tic ();
@@ -68,7 +75,7 @@ int main (int argc, char** argv)
 
 	/* **************************************** naive cpu single core **************************************** */
 	// compute_stencil -->
-	laplacian_cpu(( & u_0_1_out_cpu), u_0_0_cpu, u_0_1_cpu, x_max, y_max, z_max,iterations);
+	/* laplacian_cpu(( & u_0_1_out_cpu), u_0_0_cpu, u_0_1_cpu, x_max, y_max, z_max,iterations); */
 	// <--			
 	// run the benchmark
 	tic ();
@@ -80,9 +87,9 @@ int main (int argc, char** argv)
 	// checking "correctness" (assuming cpu version is correct)
 	int error_count=0;
 	for(i=0;i<(x_max)*(y_max)*(z_max);i++) {
-	  if(fabs(u_0_1_out[i] - u_0_1_out_cpu[i])>0.001) {
+	  if(fabs(u_0_1[i] - u_0_1_cpu[i])>0.001) {
 	    error_count++;
-	    printf("%dth error encountered at u[%d]: |%f-%f|=%5.16f\n",error_count,i,u_0_1_out[i],u_0_1_out_cpu[i],fabs(u_0_1_out[i] - u_0_1_out_cpu[i]));
+	    printf("%dth error encountered at u[%d]: |%f-%f|=%5.16f\n",error_count,i,u_0_1[i],u_0_1_cpu[i],fabs(u_0_1[i] - u_0_1_cpu[i]));
 	    if(error_count>30) {
 	      printf("too many errors\n"); exit(1);
 	    }
