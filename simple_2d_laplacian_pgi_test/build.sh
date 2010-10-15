@@ -1,0 +1,1 @@
+pgcc -lm -O3 -Minfo -ta=nvidia -o test_pgi simple_kernel.c
