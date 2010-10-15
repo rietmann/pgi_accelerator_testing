@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <math.h>
 #include <omp.h>
 #include "patusrt.h"
 
@@ -131,9 +131,9 @@ int main (int argc, char** argv)
 
 	int error_count=0;
 	for(i=0;i<(x_max)*(y_max)*(z_max);i++) {
-	  if(abs(T_0_1_out[i] - T_0_1_out_cpu[i])>0.001) {
+	  if(fabs(T_0_1_out[i] - T_0_1_out_cpu[i])>0.001) {
 	    error_count++;
-	    printf("%dth error encountered at u[%d]: |%f-%f|=%5.16f\n",error_count,i,T_0_1_out[i],T_0_1_out_cpu[i],abs(T_0_1_out[i] - T_0_1_out_cpu[i]));
+	    printf("%dth error encountered at u[%d]: |%f-%f|=%5.16f\n",error_count,i,T_0_1_out[i],T_0_1_out_cpu[i],fabs(T_0_1_out[i] - T_0_1_out_cpu[i]));
 	    if(error_count>30) {
 	      printf("too many errors\n"); exit(1);
 	    }

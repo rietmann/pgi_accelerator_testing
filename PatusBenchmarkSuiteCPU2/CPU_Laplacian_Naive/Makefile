@@ -5,14 +5,14 @@
 # required runtime files by Patus.
 #
 
-CC = icc
-CFLAGS = -O3 -openmp
+CC = pgcc 
+CFLAGS = -O3 -ta=nvidia -Minfo -lm
 
 bench: kernel.o driver.o timer.o
 	$(CC) $(CFLAGS) -o $@ $+
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
-	
+
 clean:
 	rm -rf *.o bench

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 #include "patusrt.h"
 
@@ -83,9 +84,9 @@ int main (int argc, char** argv)
 	// checking "correctness" (assuming cpu version is correct)
 	error_count=0;
 	for(i=0;i<(x_max+4)*(y_max+4)*(z_max+4);i++) {
-	  if(abs(u_0_1_out[i] - u_0_1_out_test[i])>0.001) {
+	  if(fabs(u_0_1_out[i] - u_0_1_out_test[i])>0.001) {
 	    error_count++;
-	    printf("%dth error encountered at u[%d]: |%f-%f|=%5.16f\n",error_count,i,u_0_1_out[i],u_0_1_out_test[i],abs(u_0_1_out[i] - u_0_1_out_test[i]));
+	    printf("%dth error encountered at u[%d]: |%f-%f|=%5.16f\n",error_count,i,u_0_1_out[i],u_0_1_out_test[i],fabs(u_0_1_out[i] - u_0_1_out_test[i]));
 	    if(error_count>30) {
 	      printf("too many errors\n"); exit(1);
 	    }

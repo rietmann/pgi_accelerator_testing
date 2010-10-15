@@ -111,7 +111,7 @@ int main (int argc, char** argv)
 	for(i=0;i<(x_max)*(y_max)*(z_max);i++) {
 	  if(fabs(u_0_0_out[i] - u_0_0_out_cpu[i])>0.001) {
 	    error_count++;
-	    printf("%dth error encountered at u[%d]: |%f-%f|=%5.16f\n",error_count,i,u_0_0_out[i],u_0_0_out_cpu[i],abs(u_0_0_out[i] - u_0_0_out_cpu[i]));
+	    printf("%dth error encountered at u[%d]: |%f-%f|=%5.16f\n",error_count,i,u_0_0_out[i],u_0_0_out_cpu[i],fabs(u_0_0_out[i] - u_0_0_out_cpu[i]));
 	    if(error_count>30) {
 	      printf("too many errors\n"); exit(1);
 	    }
