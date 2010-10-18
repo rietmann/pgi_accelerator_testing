@@ -62,7 +62,7 @@ int main (int argc, char** argv)
 	long nGridPointsCount = iterations * ((x_max*y_max)*z_max);
 	long nBytesTransferred = iterations * (((((x_max+2)*(y_max+2))*(z_max+2))*sizeof (float))+(((x_max*y_max)*z_max)*sizeof (float)));
 	
-
+	
 	// compute_stencil -->
 	/* laplacian(( & u_0_1_out), u_0_0, u_0_1, x_max, y_max, z_max,1); */
 	// <--			

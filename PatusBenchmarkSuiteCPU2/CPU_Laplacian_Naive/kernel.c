@@ -23,7 +23,8 @@ void laplacian(float *  *  u_0_1_out, float *  u_0_0, float *  u_0_1, int x_max,
   /*
     for t = 1..t_max by 1 parallel 1 <level 0> schedule  { ... }
   */
-#pragma acc region copy(u_0_0[0:(x_max+2)*(y_max+2)*(z_max+2)-1],u_0_1[0:(x_max+2)*(y_max+2)*(z_max+2)-1])
+  
+#pragma acc region copyin(u_0_0[0:(x_max+2)*(y_max+2)*(z_max+2)-1]) copyout(u_0_1[0:(x_max+2)*(y_max+2)*(z_max+2)-1])
   {
 #pragma acc for seq
     for (t=1; t<=t_max; t+=1)
@@ -57,10 +58,17 @@ void laplacian(float *  *  u_0_1_out, float *  u_0_0, float *  u_0_1, int x_max,
 		    _idx0 += temp;
 		    temp = 4*p_idx_z;
 		    _idx0 += temp;
+
+		    /* PGCC-ACC BUG: if replace this line */
+		    /* _idx0 = _idx0 + 2*p_idx_y + p_idx_x + 8; */
+		    /* for the following 4 lines, we get incorrect results */
+		    
 		    temp = 2*p_idx_y;
 		    _idx0 += temp;
 		    _idx0 += p_idx_x;
 		    _idx0 += 8;
+		    
+		    
 		    
 		    _idx1=_idx0-2;
 		    
