@@ -96,6 +96,14 @@ int main (int argc, char** argv)
 
 	  }
 	}
+	if(error_count==0) printf("Error Check Successful. No errors encountered.\n");
+	
+	/* iterate through results */
+	/* for(i=0;i<300;i++) { */
+	/*   printf("u_out_pgi[%d]=%2.2f,i=%2.2f,u_out_cpu[%d]=%2.2f\n",i,u_0_1[i],u_0_0_cpu[i],i,u_0_1_cpu[i]); */
+	/* } */
+	
+	
 	// free memory
 	// deallocate_grids -->
 	free(u_0_0);

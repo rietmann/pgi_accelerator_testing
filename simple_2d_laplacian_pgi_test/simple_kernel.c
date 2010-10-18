@@ -23,28 +23,15 @@ void laplacian_pgi(float *restrict u_out, float *restrict u, int x_max, int y_ma
 	int idx_p1 = id+1;
 	int idy_m1 = id-x_max;
 	int idy_p1 = id+x_max;
-	u_out[id] = -u[id] + 0.25*(u[idx_m1] + u[idx_p1] + u[idy_m1] + u[idy_p1]);
-	/* u_out[id] = id; */
+	/* u_out[id] = -u[id] + 0.25*(u[idx_m1] + u[idx_p1] + u[idy_m1] + u[idy_p1]); */
+	/* u_out[x + x_max*y] =  x + x_max*y; */
+	u_out[id] = id;
 	
       }
     
     }
   } 
 }
-
-/* void laplacian_pgi_v2(float *u_out, float *u, int x_max, int y_max) { */
-/*   int x, y; */
-/* #pragma acc region copyin((u[0])[0:(x_max*y_max)-1]) copyout((u_out[0])[0:(x_max*y_max)-1]) */
-/*   { */
-/* #pragma acc for independent */
-/*     for(y=1; y<y_max-1; y++) { */
-/* #pragma acc for independent */
-/*       for(x=1; x<x_max-1; x++) { */
-/* 	u_out[x][y] = u[x][y] + 0.25*(u[x-1][y] + u[x+1][y] + u[x][y-1] + u[x][y+1]); */
-/*       } */
-/*     } */
-/*   } */
-/* } */
 
 void laplacian_cpu(float *u_out, float *u, int x_max, int y_max) {
 
