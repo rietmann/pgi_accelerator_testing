@@ -20,7 +20,7 @@ void test_doubly_nested_loop_pgi_acc(float *restrict u_out, float *restrict u, i
 #pragma acc for independent
       for(x=1; x<x_max-1; x++) {
 	
-	/* Apparent computer BUG: this line does not give correct
+	/* Apparent compiler BUG: this line does not give correct
 	   results. It seems to delete x_max*y and just use x */
 
 	int id = x + x_max*y;
