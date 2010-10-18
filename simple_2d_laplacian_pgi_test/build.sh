@@ -1,1 +1,1 @@
-pgcc -lm -Minfo -Mbounds -Msafeptr -ta=nvidia -o test_pgi simple_kernel.c
+pgcc -lm -Minfo -Mbounds -ta=nvidia -o test_pgi simple_kernel.c
