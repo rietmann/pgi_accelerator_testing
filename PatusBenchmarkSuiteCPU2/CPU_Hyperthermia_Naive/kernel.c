@@ -27,7 +27,7 @@ void hyperthermia(float *  *  T_0_1_out, float *  T_0_0, float *  T_0_1, float *
 	/*
 	for t = 1..t_max by 1 parallel 1 <level 0> schedule  { ... }
 	*/
-#pragma acc region copyin(T_0_0[0:x_max*y_max*z_max],c_1_0[0:x_max*y_max*z_max],c_2_0[0:x_max*y_max*z_max],c_3_0[0:x_max*y_max*z_max],c_4_0[0:x_max*y_max*z_max],c_5_0[0:x_max*y_max*z_max],c_6_0[0:x_max*y_max*z_max],c_7_0[0:x_max*y_max*z_max],c_8_0[0:x_max*y_max*z_max],c_9_0[0:x_max*y_max*z_max]) copyout(T_0_1[0:x_max*y_max*z_max])
+#pragma acc region copyin(T_0_0[0:(x_max+2)*(y_max+2)*(z_max+2)],c_1_0[0:x_max*y_max*z_max],c_2_0[0:x_max*y_max*z_max],c_3_0[0:x_max*y_max*z_max],c_4_0[0:x_max*y_max*z_max],c_5_0[0:x_max*y_max*z_max],c_6_0[0:x_max*y_max*z_max],c_7_0[0:x_max*y_max*z_max],c_8_0[0:x_max*y_max*z_max],c_9_0[0:x_max*y_max*z_max]) copyout(T_0_1[0:(x_max+2)*(y_max+2)*(z_max+2)])
 	{
 #pragma acc for seq
 	  for (t=1; t<=t_max; t+=1)
@@ -47,21 +47,93 @@ void hyperthermia(float *  *  T_0_1_out, float *  T_0_0, float *  T_0_1, float *
 						u[t=(t+1), s=p[t=?, s=?][0]][0]=stencil(u[t=t, s=p[t=?, s=?][0]][0])
 						*/
 						/* _idx0 = ((((((((((p_idx_z+1)*x_max)+(2*p_idx_z))+2)*y_max)+((((2*p_idx_z)+p_idx_y)+3)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+7) */
-						_idx0=((((((((((p_idx_z+1)*x_max)+(2*p_idx_z))+2)*y_max)+((((2*p_idx_z)+p_idx_y)+3)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+7);
+						/* _idx0=((((((((((p_idx_z+1)*x_max)+(2*p_idx_z))+2)*y_max)+((((2*p_idx_z)+p_idx_y)+3)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+7); */
+						/* /\* _idx1 = ((((p_idx_z*x_max)*y_max)+(p_idx_y*x_max))+p_idx_x) *\/ */
+						/* _idx1=((x_max*((p_idx_z*y_max)+p_idx_y))+p_idx_x); */
+						/* /\* _idx2 = ((((((((((p_idx_z+1)*x_max)+(2*p_idx_z))+2)*y_max)+((((2*p_idx_z)+p_idx_y)+3)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+6) *\/ */
+						/* _idx2=(_idx0-1); */
+						/* /\* _idx3 = ((((((((((p_idx_z+1)*x_max)+(2*p_idx_z))+2)*y_max)+((((2*p_idx_z)+p_idx_y)+3)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+8) *\/ */
+						/* _idx3=(_idx2+2); */
+						/* /\* _idx4 = ((((((((((p_idx_z+1)*x_max)+(2*p_idx_z))+2)*y_max)+((((2*p_idx_z)+p_idx_y)+2)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+5) *\/ */
+						/* _idx4=((_idx2-x_max)-1); */
+						/* /\* _idx5 = ((((((((((p_idx_z+1)*x_max)+(2*p_idx_z))+2)*y_max)+((((2*p_idx_z)+p_idx_y)+4)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+9) *\/ */
+						/* _idx5=((_idx2+x_max)+3); */
+						/* /\* _idx6 = ((((((((p_idx_z*x_max)+(2*p_idx_z))*y_max)+((((2*p_idx_z)+p_idx_y)+1)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+3) *\/ */
+						/* _idx6=(((_idx5+((( - x_max)-2)*y_max))-(3*x_max))-6); */
+						/* /\* _idx7 = ((((((((((p_idx_z+2)*x_max)+(2*p_idx_z))+4)*y_max)+((((2*p_idx_z)+p_idx_y)+5)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+11) *\/ */
+						/* _idx7=(((_idx5+((x_max+2)*y_max))+x_max)+2); */
+
+						{
+						  int __tmp0 = (p_idx_z+1);
+						  int __tmp1 = (__tmp0*x_max);
+						  int __tmp2 = (2*p_idx_z);
+						  int __tmp3 = (__tmp1+__tmp2);
+						  int __tmp4 = (__tmp3+2);
+						  int __tmp5 = (__tmp4*y_max);
+						  int __tmp6 = (2*p_idx_z);
+						  int __tmp7 = (__tmp6+p_idx_y);
+						  int __tmp8 = (__tmp7+3);
+						  int __tmp9 = (__tmp8*x_max);
+						  int __tmp10 = (__tmp5+__tmp9);
+						  int __tmp11 = (4*p_idx_z);
+						  int __tmp12 = (__tmp10+__tmp11);
+						  int __tmp13 = (2*p_idx_y);
+						  int __tmp14 = (__tmp12+__tmp13);
+						  int __tmp15 = (__tmp14+p_idx_x);
+						  int __tmp16 = (__tmp15+7);
+						  _idx0=__tmp16;
+						}
 						/* _idx1 = ((((p_idx_z*x_max)*y_max)+(p_idx_y*x_max))+p_idx_x) */
-						_idx1=((x_max*((p_idx_z*y_max)+p_idx_y))+p_idx_x);
+						{
+						  int __tmp17 = (p_idx_z*y_max);
+						  int __tmp18 = (__tmp17+p_idx_y);
+						  int __tmp19 = (x_max*__tmp18);
+						  int __tmp20 = (__tmp19+p_idx_x);
+						  _idx1=__tmp20;
+						}
 						/* _idx2 = ((((((((((p_idx_z+1)*x_max)+(2*p_idx_z))+2)*y_max)+((((2*p_idx_z)+p_idx_y)+3)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+6) */
-						_idx2=(_idx0-1);
+						{
+						  int __tmp21 = (_idx0-1);
+						  _idx2=__tmp21;
+						}
 						/* _idx3 = ((((((((((p_idx_z+1)*x_max)+(2*p_idx_z))+2)*y_max)+((((2*p_idx_z)+p_idx_y)+3)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+8) */
-						_idx3=(_idx2+2);
+						{
+						  int __tmp22 = (_idx2+2);
+						  _idx3=__tmp22;
+						}
 						/* _idx4 = ((((((((((p_idx_z+1)*x_max)+(2*p_idx_z))+2)*y_max)+((((2*p_idx_z)+p_idx_y)+2)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+5) */
-						_idx4=((_idx2-x_max)-1);
+						{
+						  int __tmp23 = (_idx2-x_max);
+						  int __tmp24 = (__tmp23-1);
+						  _idx4=__tmp24;
+						}
 						/* _idx5 = ((((((((((p_idx_z+1)*x_max)+(2*p_idx_z))+2)*y_max)+((((2*p_idx_z)+p_idx_y)+4)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+9) */
-						_idx5=((_idx2+x_max)+3);
+						{
+						  int __tmp25 = (_idx2+x_max);
+						  int __tmp26 = (__tmp25+3);
+						  _idx5=__tmp26;
+						}
 						/* _idx6 = ((((((((p_idx_z*x_max)+(2*p_idx_z))*y_max)+((((2*p_idx_z)+p_idx_y)+1)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+3) */
-						_idx6=(((_idx5+((( - x_max)-2)*y_max))-(3*x_max))-6);
+						{
+						  int __tmp27 = (( - x_max)-2);
+						  int __tmp28 = (__tmp27*y_max);
+						  int __tmp29 = (_idx5+__tmp28);
+						  int __tmp30 = (3*x_max);
+						  int __tmp31 = (__tmp29-__tmp30);
+						  int __tmp32 = (__tmp31-6);
+						  _idx6=__tmp32;
+						}
 						/* _idx7 = ((((((((((p_idx_z+2)*x_max)+(2*p_idx_z))+4)*y_max)+((((2*p_idx_z)+p_idx_y)+5)*x_max))+(4*p_idx_z))+(2*p_idx_y))+p_idx_x)+11) */
-						_idx7=(((_idx5+((x_max+2)*y_max))+x_max)+2);
+						{
+						  int __tmp33 = (x_max+2);
+						  int __tmp34 = (__tmp33*y_max);
+						  int __tmp35 = (_idx5+__tmp34);
+						  int __tmp36 = (__tmp35+x_max);
+						  int __tmp37 = (__tmp36+2);
+						  _idx7=__tmp37;
+						}
+
+
 						T_0_1[_idx0]=((((T_0_0[_idx0]*((c_1_0[_idx1]*T_0_0[_idx0])+c_2_0[_idx1]))+c_3_0[_idx1])+((c_4_0[_idx1]*T_0_0[_idx2])+(c_5_0[_idx1]*T_0_0[_idx3])))+(((c_6_0[_idx1]*T_0_0[_idx4])+(c_7_0[_idx1]*T_0_0[_idx5]))+((c_8_0[_idx1]*T_0_0[_idx6])+(c_9_0[_idx1]*T_0_0[_idx7]))));
 					}
 				}

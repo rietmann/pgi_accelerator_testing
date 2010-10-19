@@ -87,7 +87,7 @@ void tricubic_interpolation(double *  *  u_0_1_out, double *  u_0_0, double *  u
 	double w4_c;
 
 	
-#pragma acc region copyin(u_0_0[0:x_max*y_max*z_max],a_1_0[0:x_max*y_max*z_max],b_2_0[0:x_max*y_max*z_max],c_3_0[0:x_max*y_max*z_max]) copyout(u_0_1[0:x_max*y_max*z_max])
+#pragma acc region copyin(u_0_0[0:(x_max+3)*(y_max+3)*(z_max+3)],a_1_0[0:x_max*y_max*z_max],b_2_0[0:x_max*y_max*z_max],c_3_0[0:x_max*y_max*z_max]) copy(u_0_1[0:(x_max+3)*(y_max+3)*(z_max+3)])
 	{
 #pragma acc for seq
 	  for (t=1; t<=t_max; t+=1)	
@@ -106,19 +106,128 @@ void tricubic_interpolation(double *  *  u_0_1_out, double *  u_0_0, double *  u
 						u[t=(t+1), s=p[t=?, s=?][0]][0]=stencil(u[t=t, s=p[t=?, s=?][0]][0])
 						*/
 						/* _idx0 = ((((p_idx_z*x_max)*y_max)+(p_idx_y*x_max))+p_idx_x) */
-						_idx0=((((p_idx_z*x_max)*y_max)+(p_idx_y*x_max))+p_idx_x);
-						w1_a=((a_1_0[_idx0]*(a_1_0[_idx0]+1.0))*((a_1_0[_idx0]+2.0)*0.16666666666666666));
-						w2_a=(((a_1_0[_idx0]-1.0)*(a_1_0[_idx0]+1.0))*((a_1_0[_idx0]+2.0)*-0.5));
-						w3_a=(((a_1_0[_idx0]-1.0)*a_1_0[_idx0])*((a_1_0[_idx0]+2.0)*0.5));
-						w4_a=(((a_1_0[_idx0]-1.0)*a_1_0[_idx0])*((a_1_0[_idx0]+1.0)*-0.16666666666666666));
-						w1_b=((b_2_0[_idx0]*(b_2_0[_idx0]+1.0))*((b_2_0[_idx0]+2.0)*0.16666666666666666));
-						w2_b=(((b_2_0[_idx0]-1.0)*(b_2_0[_idx0]+1.0))*((b_2_0[_idx0]+2.0)*-0.5));
-						w3_b=(((b_2_0[_idx0]-1.0)*b_2_0[_idx0])*((b_2_0[_idx0]+2.0)*0.5));
-						w4_b=(((b_2_0[_idx0]-1.0)*b_2_0[_idx0])*((b_2_0[_idx0]+1.0)*-0.16666666666666666));
-						w1_c=((c_3_0[_idx0]*(c_3_0[_idx0]+1.0))*((c_3_0[_idx0]+2.0)*0.16666666666666666));
-						w2_c=(((c_3_0[_idx0]-1.0)*(c_3_0[_idx0]+1.0))*((c_3_0[_idx0]+2.0)*-0.5));
-						w3_c=(((c_3_0[_idx0]-1.0)*c_3_0[_idx0])*((c_3_0[_idx0]+2.0)*0.5));
-						w4_c=(((c_3_0[_idx0]-1.0)*c_3_0[_idx0])*((c_3_0[_idx0]+1.0)*-0.16666666666666666));
+						/* _idx0=((((p_idx_z*x_max)*y_max)+(p_idx_y*x_max))+p_idx_x); */
+						/* w1_a=((a_1_0[_idx0]*(a_1_0[_idx0]+1.0))*((a_1_0[_idx0]+2.0)*0.16666666666666666)); */
+						/* w2_a=(((a_1_0[_idx0]-1.0)*(a_1_0[_idx0]+1.0))*((a_1_0[_idx0]+2.0)*-0.5)); */
+						/* w3_a=(((a_1_0[_idx0]-1.0)*a_1_0[_idx0])*((a_1_0[_idx0]+2.0)*0.5)); */
+						/* w4_a=(((a_1_0[_idx0]-1.0)*a_1_0[_idx0])*((a_1_0[_idx0]+1.0)*-0.16666666666666666)); */
+						/* w1_b=((b_2_0[_idx0]*(b_2_0[_idx0]+1.0))*((b_2_0[_idx0]+2.0)*0.16666666666666666)); */
+						/* w2_b=(((b_2_0[_idx0]-1.0)*(b_2_0[_idx0]+1.0))*((b_2_0[_idx0]+2.0)*-0.5)); */
+						/* w3_b=(((b_2_0[_idx0]-1.0)*b_2_0[_idx0])*((b_2_0[_idx0]+2.0)*0.5)); */
+						/* w4_b=(((b_2_0[_idx0]-1.0)*b_2_0[_idx0])*((b_2_0[_idx0]+1.0)*-0.16666666666666666)); */
+						/* w1_c=((c_3_0[_idx0]*(c_3_0[_idx0]+1.0))*((c_3_0[_idx0]+2.0)*0.16666666666666666)); */
+						/* w2_c=(((c_3_0[_idx0]-1.0)*(c_3_0[_idx0]+1.0))*((c_3_0[_idx0]+2.0)*-0.5)); */
+						/* w3_c=(((c_3_0[_idx0]-1.0)*c_3_0[_idx0])*((c_3_0[_idx0]+2.0)*0.5)); */
+						/* w4_c=(((c_3_0[_idx0]-1.0)*c_3_0[_idx0])*((c_3_0[_idx0]+1.0)*-0.16666666666666666)); */
+
+						{
+							int __tmp0 = (p_idx_z*x_max);
+							int __tmp1 = (__tmp0*y_max);
+							int __tmp2 = (p_idx_y*x_max);
+							int __tmp3 = (__tmp1+__tmp2);
+							int __tmp4 = (__tmp3+p_idx_x);
+							_idx0=__tmp4;
+						}
+						{
+							double __tmp5 = (a_1_0[_idx0]+1.0);
+							double __tmp6 = (a_1_0[_idx0]*__tmp5);
+							double __tmp7 = (a_1_0[_idx0]+2.0);
+							double __tmp8 = (__tmp7*0.16666666666666666);
+							double __tmp9 = (__tmp6*__tmp8);
+							w1_a=__tmp9;
+						}
+						{
+							double __tmp10 = (a_1_0[_idx0]-1.0);
+							double __tmp11 = (a_1_0[_idx0]+1.0);
+							double __tmp12 = (__tmp10*__tmp11);
+							double __tmp13 = (a_1_0[_idx0]+2.0);
+							double __tmp14 = (__tmp13*-0.5);
+							double __tmp15 = (__tmp12*__tmp14);
+							w2_a=__tmp15;
+						}
+						{
+							double __tmp16 = (a_1_0[_idx0]-1.0);
+							double __tmp17 = (__tmp16*a_1_0[_idx0]);
+							double __tmp18 = (a_1_0[_idx0]+2.0);
+							double __tmp19 = (__tmp18*0.5);
+							double __tmp20 = (__tmp17*__tmp19);
+							w3_a=__tmp20;
+						}
+						{
+							double __tmp21 = (a_1_0[_idx0]-1.0);
+							double __tmp22 = (__tmp21*a_1_0[_idx0]);
+							double __tmp23 = (a_1_0[_idx0]+1.0);
+							double __tmp24 = (__tmp23*-0.16666666666666666);
+							double __tmp25 = (__tmp22*__tmp24);
+							w4_a=__tmp25;
+						}
+						{
+							double __tmp26 = (b_2_0[_idx0]+1.0);
+							double __tmp27 = (b_2_0[_idx0]*__tmp26);
+							double __tmp28 = (b_2_0[_idx0]+2.0);
+							double __tmp29 = (__tmp28*0.16666666666666666);
+							double __tmp30 = (__tmp27*__tmp29);
+							w1_b=__tmp30;
+						}
+						{
+							double __tmp31 = (b_2_0[_idx0]-1.0);
+							double __tmp32 = (b_2_0[_idx0]+1.0);
+							double __tmp33 = (__tmp31*__tmp32);
+							double __tmp34 = (b_2_0[_idx0]+2.0);
+							double __tmp35 = (__tmp34*-0.5);
+							double __tmp36 = (__tmp33*__tmp35);
+							w2_b=__tmp36;
+						}
+						{
+							double __tmp37 = (b_2_0[_idx0]-1.0);
+							double __tmp38 = (__tmp37*b_2_0[_idx0]);
+							double __tmp39 = (b_2_0[_idx0]+2.0);
+							double __tmp40 = (__tmp39*0.5);
+							double __tmp41 = (__tmp38*__tmp40);
+							w3_b=__tmp41;
+						}
+						{
+							double __tmp42 = (b_2_0[_idx0]-1.0);
+							double __tmp43 = (__tmp42*b_2_0[_idx0]);
+							double __tmp44 = (b_2_0[_idx0]+1.0);
+							double __tmp45 = (__tmp44*-0.16666666666666666);
+							double __tmp46 = (__tmp43*__tmp45);
+							w4_b=__tmp46;
+						}
+						{
+							double __tmp47 = (c_3_0[_idx0]+1.0);
+							double __tmp48 = (c_3_0[_idx0]*__tmp47);
+							double __tmp49 = (c_3_0[_idx0]+2.0);
+							double __tmp50 = (__tmp49*0.16666666666666666);
+							double __tmp51 = (__tmp48*__tmp50);
+							w1_c=__tmp51;
+						}
+						{
+							double __tmp52 = (c_3_0[_idx0]-1.0);
+							double __tmp53 = (c_3_0[_idx0]+1.0);
+							double __tmp54 = (__tmp52*__tmp53);
+							double __tmp55 = (c_3_0[_idx0]+2.0);
+							double __tmp56 = (__tmp55*-0.5);
+							double __tmp57 = (__tmp54*__tmp56);
+							w2_c=__tmp57;
+						}
+						{
+							double __tmp58 = (c_3_0[_idx0]-1.0);
+							double __tmp59 = (__tmp58*c_3_0[_idx0]);
+							double __tmp60 = (c_3_0[_idx0]+2.0);
+							double __tmp61 = (__tmp60*0.5);
+							double __tmp62 = (__tmp59*__tmp61);
+							w3_c=__tmp62;
+						}
+						{
+							double __tmp63 = (c_3_0[_idx0]-1.0);
+							double __tmp64 = (__tmp63*c_3_0[_idx0]);
+							double __tmp65 = (c_3_0[_idx0]+1.0);
+							double __tmp66 = (__tmp65*-0.16666666666666666);
+							double __tmp67 = (__tmp64*__tmp66);
+							w4_c=__tmp67;
+						}
+						
 						/* _idx1 = (((((((p_idx_z*x_max)+(3*p_idx_z))*y_max)+(((3*p_idx_z)+p_idx_y)*x_max))+(9*p_idx_z))+(3*p_idx_y))+p_idx_x) */
 						_idx1=((((_idx0+((3*p_idx_z)*y_max))+((3*p_idx_z)*x_max))+(9*p_idx_z))+(3*p_idx_y));
 						/* _idx2 = ((((((((p_idx_z*x_max)+(3*p_idx_z))*y_max)+(((3*p_idx_z)+p_idx_y)*x_max))+(9*p_idx_z))+(3*p_idx_y))+p_idx_x)+1) */

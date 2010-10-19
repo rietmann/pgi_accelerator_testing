@@ -105,19 +105,33 @@ int main (int argc, char** argv)
 	}
 	toc (nFlopsPerStencil, nGridPointsCount, nBytesTransferred);
 
-
 	// checking "correctness" (assuming cpu version is correct)
 	int error_count=0;
-	for(i=0;i<(x_max)*(y_max)*(z_max);i++) {
-	  if(fabs(u_0_0_out[i] - u_0_0_out_cpu[i])>0.001) {
-	    error_count++;
-	    printf("%dth error encountered at u[%d]: |%f-%f|=%5.16f\n",error_count,i,u_0_0_out[i],u_0_0_out_cpu[i],fabs(u_0_0_out[i] - u_0_0_out_cpu[i]));
-	    if(error_count>30) {
-	      printf("too many errors\n"); exit(1);
+	int halo = 0;
+	int x,y,z;
+	for(y=0;y<x_max;y++) {
+	  for(x=0;x<x_max;x++) {
+	    for(z=0;z<y_max;z++) {
+	      i = x + (x_max+halo)*y + (x_max+halo)*(y_max+halo)*z;
+	      if(fabs(u_0_0_out[i] - u_0_0_out_cpu[i])>0.001) {
+		error_count++;
+		printf("%dth error encountered at u[%d]: |%f-%f|=%5.16f\n",error_count,i,u_0_0_out[i],u_0_0_out_cpu[i],fabs(u_0_0_out[i] - u_0_0_out_cpu[i]));
+		if(error_count>30) {
+		  printf("too many errors\n"); printf("print some solutions\n");
+		  for(x=0;x<100;x++) {
+		    printf("u_pgi[%d]=%2.2f ?? u_cpu[%d]=%2.2f\n",x,u_0_0_out[x],x,u_0_0_out_cpu[x]);
+		  }
+		  exit(1);
+		}
+	      }
 	    }
-
 	  }
 	}
+	if(error_count==0) {
+	  printf("Error Check Successful. No errors encountered.\n");	  
+	}
+			  
+	
 	
 	// free memory
 	// deallocate_grids -->

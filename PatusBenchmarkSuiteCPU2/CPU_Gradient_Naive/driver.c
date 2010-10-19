@@ -103,7 +103,9 @@ int main (int argc, char** argv)
 	// checking "correctness" (assuming cpu version is correct)
 	int error_count=0;
 	for(i=0;i<(x_max)*(y_max)*(z_max);i++) {
-	  if(fabs(ux_1_0_out[i] - ux_1_0_out_cpu[i])>0.001) {
+	  if(fabs(ux_1_0_out[i] - ux_1_0_out_cpu[i])>0.001
+	     && fabs(uy_2_0_out[i] - uy_2_0_out_cpu[i])>0.001
+	     && fabs(uz_3_0_out[i] - uz_3_0_out_cpu[i])>0.001) {
 	    error_count++;
 	    printf("%dth error encountered at u[%d]: |%f-%f|=%5.16f\n",error_count,i,ux_1_0_out[i],ux_1_0_out_cpu[i],fabs(ux_1_0_out[i] - ux_1_0_out_cpu[i]));
 	    if(error_count>30) {
@@ -112,6 +114,7 @@ int main (int argc, char** argv)
 
 	  }
 	}
+	printf("No errors found in u_i\n");
 	// free memory
 	// deallocate_grids -->
 	free(u_0_0);

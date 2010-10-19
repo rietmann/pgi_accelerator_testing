@@ -88,7 +88,7 @@ int main (int argc, char** argv)
 	int error_count=0;
 	for(i=0;i<(x_max)*(y_max)*(z_max);i++) {
 	  double error = fabs(u_0_1_out[i] - u_0_1_out_cpu[i]);
-	  if(error>0.001) {
+	  if(error>0.0001) {
 	    error_count++;
 	    printf("%dth error encountered at u[%d]: |%f-%f|=%f\n",error_count,i,u_0_1_out[i],u_0_1_out_cpu[i],error);
 	    if(error_count>30) {
@@ -97,7 +97,7 @@ int main (int argc, char** argv)
 
 	  }
 	}
-	
+	printf("Error check successful\n");
 	
 	// free memory
 	// deallocate_grids -->
