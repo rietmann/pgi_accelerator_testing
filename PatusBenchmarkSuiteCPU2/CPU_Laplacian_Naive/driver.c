@@ -47,15 +47,15 @@ int main (int argc, char** argv)
 	// initialize
 
 	// initialize_grids -->
-	//initialize(u_0_0, u_0_1, x_max, y_max, z_max);
-	//initialize(u_0_0_cpu, u_0_1_cpu, x_max, y_max, z_max);
+	/* initialize(u_0_0, u_0_1, x_max, y_max, z_max); */
+	/* initialize(u_0_0_cpu, u_0_1_cpu, x_max, y_max, z_max); */
 	// <--
 	int  j, k;
 	for (i = 0; i<(x_max+2)*(y_max+2)*(z_max+2);i++) {
-	  u_0_0[i] = 1.1;
-	  u_0_1[i] = 1.1;
-	  u_0_0_cpu[i] = 1.1;
-	  u_0_1_cpu[i] = 1.1;
+	  u_0_0[i] = 0.1;
+	  u_0_1[i] = 0.1;
+	  u_0_0_cpu[i] = 0.1;
+	  u_0_1_cpu[i] = 0.1;
 	}
 	
 	long nFlopsPerStencil = 7;
@@ -86,17 +86,37 @@ int main (int argc, char** argv)
 
 	// checking "correctness" (assuming cpu version is correct)
 	int error_count=0;
-	for(i=0;i<(x_max)*(y_max)*(z_max);i++) {
-	  if(fabs(u_0_1[i] - u_0_1_cpu[i])>0.001) {
-	    error_count++;
-	    printf("%dth error encountered at u[%d]: |%f-%f|=%5.16f\n",error_count,i,u_0_1[i],u_0_1_cpu[i],fabs(u_0_1[i] - u_0_1_cpu[i]));
-	    if(error_count>30) {
-	      printf("too many errors\n"); exit(1);
+	int x,y,z;
+	for(y=1;y<x_max+1;y++) {
+	  for(x=1;x<x_max+1;x++) {
+	    for(z=1;z<y_max+1;z++) {
+	      i = x + (x_max+2)*y + (x_max+2)*(y_max+2)*z;
+	      if(fabs(u_0_1[i] - u_0_1_cpu[i])>0.001) {
+		error_count++;
+		printf("%dth error encountered at u[%d]: |%f-%f|=%5.16f\n",error_count,i,u_0_1[i],u_0_1_cpu[i],fabs(u_0_1[i] - u_0_1_cpu[i]));
+		if(error_count>30) {
+		  printf("too many errors\n"); exit(1);
+		}
+	      }
 	    }
-
 	  }
 	}
-	if(error_count==0) printf("Error Check Successful. No errors encountered.\n");
+	if(error_count==0) {
+	  printf("Error Check Successful. No errors encountered.\n");	  
+	  /* saving results */
+	  FILE* fp;
+	  char filename[100];
+	  sprintf(filename,"/users/rietmann/tmp/stencil_laplacian_pgi_%.3d_%.3d_%.3d.dat",x_max,y_max,z_max);
+	  fp = fopen(filename,"w");
+	  if(!fp) {printf("couldn't open file: %s\n",filename); exit(1);}
+	  fprintf(fp,"%d\n",x_max);
+	  fprintf(fp,"%d\n",y_max);
+	  fprintf(fp,"%d\n",z_max);	  
+	  for(i=0;i<(x_max+2)*(y_max+2)*(z_max+2);i++) {
+	    fprintf(fp,"%2.6f\n", u_0_1[i]);
+	  }
+	  fclose(fp);
+	}
 	
 	/* iterate through results */
 	/* for(i=0;i<300;i++) { */
