@@ -1,0 +1,53 @@
+10:21:25,192  INFO StandaloneAutotuner:249 - Using optimizer: Exhaustive search
+10:21:25,198  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl1_Laplacian_Naive/./bench, 128, 128, 128, 1]...
+10:21:25,642  INFO RunExecutable:129 - Flops / stencil call:  7
+10:21:25,644  INFO RunExecutable:129 - Stencil computations:  10485760
+10:21:25,644  INFO RunExecutable:129 - Bytes transferred:     87942400
+10:21:25,644  INFO RunExecutable:129 - Total Flops:           73400320
+10:21:25,644  INFO RunExecutable:129 - Seconds elapsed:       0.166563
+10:21:25,644  INFO RunExecutable:129 - Performance:           0.440676 GFlop/s
+10:21:25,644  INFO RunExecutable:129 - Bandwidth utilization: 0.527983 GB/s
+10:21:25,645  INFO RunExecutable:129 - 445129544.000000
+10:21:25,645  INFO RunExecutable:129 - 
+10:21:25,645  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl1_Laplacian_Naive/./bench, 128, 128, 128, 2]...
+10:21:25,946  INFO RunExecutable:129 - Flops / stencil call:  7
+10:21:25,946  INFO RunExecutable:129 - Stencil computations:  10485760
+10:21:25,946  INFO RunExecutable:129 - Bytes transferred:     87942400
+10:21:25,946  INFO RunExecutable:129 - Total Flops:           73400320
+10:21:25,948  INFO RunExecutable:129 - Seconds elapsed:       0.103923
+10:21:25,948  INFO RunExecutable:129 - Performance:           0.706295 GFlop/s
+10:21:25,948  INFO RunExecutable:129 - Bandwidth utilization: 0.846226 GB/s
+10:21:25,948  INFO RunExecutable:129 - 277727932.000000
+10:21:25,948  INFO RunExecutable:129 - 
+10:21:25,948  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl1_Laplacian_Naive/./bench, 128, 128, 128, 4]...
+10:21:26,193  INFO RunExecutable:129 - Flops / stencil call:  7
+10:21:26,193  INFO RunExecutable:129 - Stencil computations:  10485760
+10:21:26,194  INFO RunExecutable:129 - Bytes transferred:     87942400
+10:21:26,194  INFO RunExecutable:129 - Total Flops:           73400320
+10:21:26,194  INFO RunExecutable:129 - Seconds elapsed:       0.076315
+10:21:26,194  INFO RunExecutable:129 - Performance:           0.961805 GFlop/s
+10:21:26,194  INFO RunExecutable:129 - Bandwidth utilization: 1.152358 GB/s
+10:21:26,194  INFO RunExecutable:129 - 203946059.000000
+10:21:26,194  INFO RunExecutable:129 - 
+10:21:26,194  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl1_Laplacian_Naive/./bench, 128, 128, 128, 8]...
+10:21:26,441  INFO RunExecutable:129 - Flops / stencil call:  7
+10:21:26,442  INFO RunExecutable:129 - Stencil computations:  10485760
+10:21:26,442  INFO RunExecutable:129 - Bytes transferred:     87942400
+10:21:26,442  INFO RunExecutable:129 - Total Flops:           73400320
+10:21:26,442  INFO RunExecutable:129 - Seconds elapsed:       0.073736
+10:21:26,442  INFO RunExecutable:129 - Performance:           0.995448 GFlop/s
+10:21:26,442  INFO RunExecutable:129 - Bandwidth utilization: 1.192666 GB/s
+10:21:26,442  INFO RunExecutable:129 - 197054697.000000
+10:21:26,442  INFO RunExecutable:129 - 
+10:21:26,442  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl1_Laplacian_Naive/./bench, 128, 128, 128, 16]...
+10:21:26,790  INFO RunExecutable:129 - Flops / stencil call:  7
+10:21:26,790  INFO RunExecutable:129 - Stencil computations:  10485760
+10:21:26,790  INFO RunExecutable:129 - Bytes transferred:     87942400
+10:21:26,790  INFO RunExecutable:129 - Total Flops:           73400320
+10:21:26,790  INFO RunExecutable:129 - Seconds elapsed:       0.141776
+10:21:26,791  INFO RunExecutable:129 - Performance:           0.517721 GFlop/s
+10:21:26,791  INFO RunExecutable:129 - Bandwidth utilization: 0.620292 GB/s
+10:21:26,791  INFO RunExecutable:129 - 378887603.000000
+10:21:26,791  INFO RunExecutable:129 - 
+128 128 128 8 
+1.97054697E8

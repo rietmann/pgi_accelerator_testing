@@ -1,0 +1,464 @@
+15:09:25,195  INFO StandaloneAutotuner:155 - ./bench 128 128 128 1:*2:64 1:*2:64 1:*2:64 8 C$4*$5*$6<=1024
+15:09:25,210  INFO StandaloneAutotuner:251 - Using optimizer: Exhaustive search
+15:09:25,255  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 1, 1, 1, 8]...
+15:09:27,374  INFO RunExecutable:129 - CUDA Error [Initialization]: unspecified launch failure.
+15:09:27,374  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:09:27,374  INFO RunExecutable:129 - Flops / stencil call:  318
+15:09:27,374  INFO RunExecutable:129 - Stencil computations:  10485760
+15:09:27,374  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:09:27,374  INFO RunExecutable:129 - Total Flops:           3334471680
+15:09:27,374  INFO RunExecutable:129 - Seconds elapsed:       0.000082
+15:09:27,375  INFO RunExecutable:129 - Performance:           40656.360190 GFlop/s
+15:09:27,375  INFO RunExecutable:129 - Bandwidth utilization: 5264.686479 GB/s
+15:09:27,375  INFO RunExecutable:129 - 221455.000000
+15:09:27,375  INFO RunExecutable:129 - 
+15:09:27,581  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 2, 1, 1, 8]...
+15:09:29,284  INFO RunExecutable:129 - CUDA Error [Initialization]: unspecified launch failure.
+15:09:29,285  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:09:29,286  INFO RunExecutable:129 - Flops / stencil call:  318
+15:09:29,286  INFO RunExecutable:129 - Stencil computations:  10485760
+15:09:29,286  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:09:29,286  INFO RunExecutable:129 - Total Flops:           3334471680
+15:09:29,286  INFO RunExecutable:129 - Seconds elapsed:       0.000079
+15:09:29,286  INFO RunExecutable:129 - Performance:           42253.135666 GFlop/s
+15:09:29,286  INFO RunExecutable:129 - Bandwidth utilization: 5471.456643 GB/s
+15:09:29,286  INFO RunExecutable:129 - 212436.000000
+15:09:29,286  INFO RunExecutable:129 - 
+15:09:29,493  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 4, 1, 1, 8]...
+15:09:31,010  INFO RunExecutable:129 - CUDA Error [Initialization]: unspecified launch failure.
+15:09:31,010  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:09:31,010  INFO RunExecutable:129 - Flops / stencil call:  318
+15:09:31,010  INFO RunExecutable:129 - Stencil computations:  10485760
+15:09:31,010  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:09:31,010  INFO RunExecutable:129 - Total Flops:           3334471680
+15:09:31,010  INFO RunExecutable:129 - Seconds elapsed:       0.000083
+15:09:31,010  INFO RunExecutable:129 - Performance:           40189.045705 GFlop/s
+15:09:31,010  INFO RunExecutable:129 - Bandwidth utilization: 5204.172841 GB/s
+15:09:31,010  INFO RunExecutable:129 - 221920.000000
+15:09:31,011  INFO RunExecutable:129 - 
+15:09:31,213  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 8, 1, 1, 8]...
+15:09:32,643  INFO RunExecutable:129 - CUDA Error [Initialization]: unspecified launch failure.
+15:09:32,643  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:09:32,643  INFO RunExecutable:129 - Flops / stencil call:  318
+15:09:32,643  INFO RunExecutable:129 - Stencil computations:  10485760
+15:09:32,643  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:09:32,643  INFO RunExecutable:129 - Total Flops:           3334471680
+15:09:32,643  INFO RunExecutable:129 - Seconds elapsed:       0.000080
+15:09:32,644  INFO RunExecutable:129 - Performance:           41624.368766 GFlop/s
+15:09:32,644  INFO RunExecutable:129 - Bandwidth utilization: 5390.036157 GB/s
+15:09:32,644  INFO RunExecutable:129 - 213173.000000
+15:09:32,644  INFO RunExecutable:129 - 
+15:09:32,846  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 16, 1, 1, 8]...
+15:09:34,264  INFO RunExecutable:129 - CUDA Error [Initialization]: unspecified launch failure.
+15:09:34,264  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:09:34,264  INFO RunExecutable:129 - Flops / stencil call:  318
+15:09:34,264  INFO RunExecutable:129 - Stencil computations:  10485760
+15:09:34,264  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:09:34,264  INFO RunExecutable:129 - Total Flops:           3334471680
+15:09:34,264  INFO RunExecutable:129 - Seconds elapsed:       0.000080
+15:09:34,264  INFO RunExecutable:129 - Performance:           41624.368766 GFlop/s
+15:09:34,265  INFO RunExecutable:129 - Bandwidth utilization: 5390.036157 GB/s
+15:09:34,265  INFO RunExecutable:129 - 213766.000000
+15:09:34,265  INFO RunExecutable:129 - 
+15:09:34,473  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 32, 1, 1, 8]...
+15:09:35,876  INFO RunExecutable:129 - CUDA Error [Initialization]: unspecified launch failure.
+15:09:35,876  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:09:35,876  INFO RunExecutable:129 - Flops / stencil call:  318
+15:09:35,876  INFO RunExecutable:129 - Stencil computations:  10485760
+15:09:35,876  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:09:35,876  INFO RunExecutable:129 - Total Flops:           3334471680
+15:09:35,876  INFO RunExecutable:129 - Seconds elapsed:       0.000083
+15:09:35,877  INFO RunExecutable:129 - Performance:           40073.890846 GFlop/s
+15:09:35,877  INFO RunExecutable:129 - Bandwidth utilization: 5189.261171 GB/s
+15:09:35,877  INFO RunExecutable:129 - 221514.000000
+15:09:35,877  INFO RunExecutable:129 - 
+15:09:36,085  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 64, 1, 1, 8]...
+15:09:37,558  INFO RunExecutable:129 - CUDA Error [Initialization]: unspecified launch failure.
+15:09:37,558  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:09:37,558  INFO RunExecutable:129 - Flops / stencil call:  318
+15:09:37,558  INFO RunExecutable:129 - Stencil computations:  10485760
+15:09:37,558  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:09:37,558  INFO RunExecutable:129 - Total Flops:           3334471680
+15:09:37,558  INFO RunExecutable:129 - Seconds elapsed:       0.000083
+15:09:37,558  INFO RunExecutable:129 - Performance:           40189.045705 GFlop/s
+15:09:37,558  INFO RunExecutable:129 - Bandwidth utilization: 5204.172841 GB/s
+15:09:37,558  INFO RunExecutable:129 - 220702.000000
+15:09:37,559  INFO RunExecutable:129 - 
+15:09:37,754  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 1, 2, 1, 8]...
+15:09:42,754  INFO RunExecutable:129 - Flops / stencil call:  318
+15:09:42,755  INFO RunExecutable:129 - Stencil computations:  10485760
+15:09:42,756  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:09:42,757  INFO RunExecutable:129 - Total Flops:           3334471680
+15:09:42,757  INFO RunExecutable:129 - Seconds elapsed:       2.695729
+15:09:42,757  INFO RunExecutable:129 - Performance:           1.236946 GFlop/s
+15:09:42,757  INFO RunExecutable:129 - Bandwidth utilization: 0.160175 GB/s
+15:09:42,757  INFO RunExecutable:129 - 7205608426.000000
+15:09:42,757  INFO RunExecutable:129 - 
+15:09:42,904  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 2, 2, 1, 8]...
+15:09:46,519  INFO RunExecutable:129 - Flops / stencil call:  318
+15:09:46,519  INFO RunExecutable:129 - Stencil computations:  10485760
+15:09:46,520  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:09:46,520  INFO RunExecutable:129 - Total Flops:           3334471680
+15:09:46,520  INFO RunExecutable:129 - Seconds elapsed:       1.700657
+15:09:46,520  INFO RunExecutable:129 - Performance:           1.960696 GFlop/s
+15:09:46,520  INFO RunExecutable:129 - Bandwidth utilization: 0.253895 GB/s
+15:09:46,520  INFO RunExecutable:129 - 4545808107.000000
+15:09:46,520  INFO RunExecutable:129 - 
+15:09:46,673  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 4, 2, 1, 8]...
+15:09:49,753  INFO RunExecutable:129 - Flops / stencil call:  318
+15:09:49,754  INFO RunExecutable:129 - Stencil computations:  10485760
+15:09:49,754  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:09:49,754  INFO RunExecutable:129 - Total Flops:           3334471680
+15:09:49,754  INFO RunExecutable:129 - Seconds elapsed:       1.322394
+15:09:49,754  INFO RunExecutable:129 - Performance:           2.521542 GFlop/s
+15:09:49,754  INFO RunExecutable:129 - Bandwidth utilization: 0.326520 GB/s
+15:09:49,754  INFO RunExecutable:129 - 3534719730.000000
+15:09:49,754  INFO RunExecutable:129 - 
+15:09:49,909  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 8, 2, 1, 8]...
+15:09:52,718  INFO RunExecutable:129 - Flops / stencil call:  318
+15:09:52,718  INFO RunExecutable:129 - Stencil computations:  10485760
+15:09:52,718  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:09:52,718  INFO RunExecutable:129 - Total Flops:           3334471680
+15:09:52,718  INFO RunExecutable:129 - Seconds elapsed:       1.119823
+15:09:52,718  INFO RunExecutable:129 - Performance:           2.977677 GFlop/s
+15:09:52,719  INFO RunExecutable:129 - Bandwidth utilization: 0.385586 GB/s
+15:09:52,719  INFO RunExecutable:129 - 2993253333.000000
+15:09:52,719  INFO RunExecutable:129 - 
+15:09:52,877  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 16, 2, 1, 8]...
+15:09:54,418  INFO RunExecutable:129 - Flops / stencil call:  318
+15:09:54,418  INFO RunExecutable:129 - Stencil computations:  10485760
+15:09:54,418  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:09:54,418  INFO RunExecutable:129 - Total Flops:           3334471680
+15:09:54,418  INFO RunExecutable:129 - Seconds elapsed:       0.022943
+15:09:54,418  INFO RunExecutable:129 - Performance:           145.337087 GFlop/s
+15:09:54,418  INFO RunExecutable:129 - Bandwidth utilization: 18.820037 GB/s
+15:09:54,419  INFO RunExecutable:129 - 61326604.000000
+15:09:54,419  INFO RunExecutable:129 - 
+15:09:54,618  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 32, 2, 1, 8]...
+15:10:26,703  INFO RunExecutable:129 - Flops / stencil call:  318
+15:10:26,703  INFO RunExecutable:129 - Stencil computations:  10485760
+15:10:26,704  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:10:26,704  INFO RunExecutable:129 - Total Flops:           3334471680
+15:10:26,704  INFO RunExecutable:129 - Seconds elapsed:       30.509560
+15:10:26,704  INFO RunExecutable:129 - Performance:           0.109293 GFlop/s
+15:10:26,704  INFO RunExecutable:129 - Bandwidth utilization: 0.014153 GB/s
+15:10:26,704  INFO RunExecutable:129 - 81551184221.000000
+15:10:26,704  INFO RunExecutable:129 - 
+15:10:30,915  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 64, 2, 1, 8]...
+15:10:33,064  INFO RunExecutable:129 - Flops / stencil call:  318
+15:10:33,064  INFO RunExecutable:129 - Stencil computations:  10485760
+15:10:33,064  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:10:33,064  INFO RunExecutable:129 - Total Flops:           3334471680
+15:10:33,065  INFO RunExecutable:129 - Seconds elapsed:       0.532043
+15:10:33,065  INFO RunExecutable:129 - Performance:           6.267298 GFlop/s
+15:10:33,065  INFO RunExecutable:129 - Bandwidth utilization: 0.811567 GB/s
+15:10:33,065  INFO RunExecutable:129 - 1422137609.000000
+15:10:33,065  INFO RunExecutable:129 - 
+15:10:33,225  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 1, 4, 1, 8]...
+15:10:37,437  INFO RunExecutable:129 - Flops / stencil call:  318
+15:10:37,438  INFO RunExecutable:129 - Stencil computations:  10485760
+15:10:37,438  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:10:37,438  INFO RunExecutable:129 - Total Flops:           3334471680
+15:10:37,438  INFO RunExecutable:129 - Seconds elapsed:       2.144826
+15:10:37,438  INFO RunExecutable:129 - Performance:           1.554658 GFlop/s
+15:10:37,438  INFO RunExecutable:129 - Bandwidth utilization: 0.201316 GB/s
+15:10:37,438  INFO RunExecutable:129 - 5733058124.000000
+15:10:37,438  INFO RunExecutable:129 - 
+15:10:37,591  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 2, 4, 1, 8]...
+15:10:40,902  INFO RunExecutable:129 - Flops / stencil call:  318
+15:10:40,902  INFO RunExecutable:129 - Stencil computations:  10485760
+15:10:40,902  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:10:40,902  INFO RunExecutable:129 - Total Flops:           3334471680
+15:10:40,902  INFO RunExecutable:129 - Seconds elapsed:       1.480948
+15:10:40,902  INFO RunExecutable:129 - Performance:           2.251579 GFlop/s
+15:10:40,903  INFO RunExecutable:129 - Bandwidth utilization: 0.291562 GB/s
+15:10:40,903  INFO RunExecutable:129 - 3958530883.000000
+15:10:40,903  INFO RunExecutable:129 - 
+15:10:41,058  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 4, 4, 1, 8]...
+15:10:43,972  INFO RunExecutable:129 - Flops / stencil call:  318
+15:10:43,973  INFO RunExecutable:129 - Stencil computations:  10485760
+15:10:43,973  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:10:43,973  INFO RunExecutable:129 - Total Flops:           3334471680
+15:10:43,973  INFO RunExecutable:129 - Seconds elapsed:       1.193728
+15:10:43,973  INFO RunExecutable:129 - Performance:           2.793326 GFlop/s
+15:10:43,973  INFO RunExecutable:129 - Bandwidth utilization: 0.361714 GB/s
+15:10:43,973  INFO RunExecutable:129 - 3190801621.000000
+15:10:43,973  INFO RunExecutable:129 - 
+15:10:44,125  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 8, 4, 1, 8]...
+15:10:45,539  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:10:45,539  INFO RunExecutable:129 - Flops / stencil call:  318
+15:10:45,539  INFO RunExecutable:129 - Stencil computations:  10485760
+15:10:45,539  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:10:45,539  INFO RunExecutable:129 - Total Flops:           3334471680
+15:10:45,539  INFO RunExecutable:129 - Seconds elapsed:       0.000092
+15:10:45,539  INFO RunExecutable:129 - Performance:           36232.611154 GFlop/s
+15:10:45,539  INFO RunExecutable:129 - Bandwidth utilization: 4691.844945 GB/s
+15:10:45,539  INFO RunExecutable:129 - 243766.000000
+15:10:45,539  INFO RunExecutable:129 - 
+15:10:45,738  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 16, 4, 1, 8]...
+15:11:17,216  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:11:17,216  INFO RunExecutable:129 - Flops / stencil call:  318
+15:11:17,216  INFO RunExecutable:129 - Stencil computations:  10485760
+15:11:17,216  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:11:17,216  INFO RunExecutable:129 - Total Flops:           3334471680
+15:11:17,216  INFO RunExecutable:129 - Seconds elapsed:       0.000095
+15:11:17,216  INFO RunExecutable:129 - Performance:           35140.170616 GFlop/s
+15:11:17,216  INFO RunExecutable:129 - Bandwidth utilization: 4550.382283 GB/s
+15:11:17,216  INFO RunExecutable:129 - 254723.000000
+15:11:17,217  INFO RunExecutable:129 - 
+15:11:21,420  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 32, 4, 1, 8]...
+15:11:23,574  INFO RunExecutable:129 - Flops / stencil call:  318
+15:11:23,574  INFO RunExecutable:129 - Stencil computations:  10485760
+15:11:23,574  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:11:23,574  INFO RunExecutable:129 - Total Flops:           3334471680
+15:11:23,574  INFO RunExecutable:129 - Seconds elapsed:       0.531655
+15:11:23,574  INFO RunExecutable:129 - Performance:           6.271873 GFlop/s
+15:11:23,574  INFO RunExecutable:129 - Bandwidth utilization: 0.812159 GB/s
+15:11:23,574  INFO RunExecutable:129 - 1421097135.000000
+15:11:23,574  INFO RunExecutable:129 - 
+15:11:23,732  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 64, 4, 1, 8]...
+15:11:55,341  INFO RunExecutable:129 - Flops / stencil call:  318
+15:11:55,341  INFO RunExecutable:129 - Stencil computations:  10485760
+15:11:55,341  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:11:55,341  INFO RunExecutable:129 - Total Flops:           3334471680
+15:11:55,341  INFO RunExecutable:129 - Seconds elapsed:       30.042931
+15:11:55,342  INFO RunExecutable:129 - Performance:           0.110990 GFlop/s
+15:11:55,342  INFO RunExecutable:129 - Bandwidth utilization: 0.014372 GB/s
+15:11:55,342  INFO RunExecutable:129 - 80303901197.000000
+15:11:55,342  INFO RunExecutable:129 - 
+15:11:59,557  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 1, 8, 1, 8]...
+15:12:03,518  INFO RunExecutable:129 - Flops / stencil call:  318
+15:12:03,518  INFO RunExecutable:129 - Stencil computations:  10485760
+15:12:03,518  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:12:03,518  INFO RunExecutable:129 - Total Flops:           3334471680
+15:12:03,518  INFO RunExecutable:129 - Seconds elapsed:       1.943582
+15:12:03,518  INFO RunExecutable:129 - Performance:           1.715632 GFlop/s
+15:12:03,518  INFO RunExecutable:129 - Bandwidth utilization: 0.222161 GB/s
+15:12:03,518  INFO RunExecutable:129 - 5195139242.000000
+15:12:03,519  INFO RunExecutable:129 - 
+15:12:03,680  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 2, 8, 1, 8]...
+15:12:06,839  INFO RunExecutable:129 - Flops / stencil call:  318
+15:12:06,839  INFO RunExecutable:129 - Stencil computations:  10485760
+15:12:06,839  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:12:06,839  INFO RunExecutable:129 - Total Flops:           3334471680
+15:12:06,839  INFO RunExecutable:129 - Seconds elapsed:       1.361812
+15:12:06,839  INFO RunExecutable:129 - Performance:           2.448555 GFlop/s
+15:12:06,840  INFO RunExecutable:129 - Bandwidth utilization: 0.317069 GB/s
+15:12:06,840  INFO RunExecutable:129 - 3640085117.000000
+15:12:06,840  INFO RunExecutable:129 - 
+15:12:06,990  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 4, 8, 1, 8]...
+15:12:38,443  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:12:38,443  INFO RunExecutable:129 - Flops / stencil call:  318
+15:12:38,443  INFO RunExecutable:129 - Stencil computations:  10485760
+15:12:38,444  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:12:38,444  INFO RunExecutable:129 - Total Flops:           3334471680
+15:12:38,444  INFO RunExecutable:129 - Seconds elapsed:       0.000159
+15:12:38,444  INFO RunExecutable:129 - Performance:           20968.197759 GFlop/s
+15:12:38,444  INFO RunExecutable:129 - Bandwidth utilization: 2715.220613 GB/s
+15:12:38,444  INFO RunExecutable:129 - 423494.000000
+15:12:38,444  INFO RunExecutable:129 - 
+15:12:42,658  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 8, 8, 1, 8]...
+15:13:14,440  INFO RunExecutable:129 - Flops / stencil call:  318
+15:13:14,440  INFO RunExecutable:129 - Stencil computations:  10485760
+15:13:14,441  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:13:14,441  INFO RunExecutable:129 - Total Flops:           3334471680
+15:13:14,441  INFO RunExecutable:129 - Seconds elapsed:       30.151425
+15:13:14,441  INFO RunExecutable:129 - Performance:           0.110591 GFlop/s
+15:13:14,441  INFO RunExecutable:129 - Bandwidth utilization: 0.014321 GB/s
+15:13:14,441  INFO RunExecutable:129 - 80593901706.000000
+15:13:14,441  INFO RunExecutable:129 - 
+15:13:18,641  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 16, 8, 1, 8]...
+15:13:20,145  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:13:20,145  INFO RunExecutable:129 - Flops / stencil call:  318
+15:13:20,145  INFO RunExecutable:129 - Stencil computations:  10485760
+15:13:20,145  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:13:20,145  INFO RunExecutable:129 - Total Flops:           3334471680
+15:13:20,145  INFO RunExecutable:129 - Seconds elapsed:       0.000089
+15:13:20,145  INFO RunExecutable:129 - Performance:           37395.154827 GFlop/s
+15:13:20,145  INFO RunExecutable:129 - Bandwidth utilization: 4842.385425 GB/s
+15:13:20,145  INFO RunExecutable:129 - 239339.000000
+15:13:20,145  INFO RunExecutable:129 - 
+15:13:20,353  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 32, 8, 1, 8]...
+15:13:51,851  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:13:51,851  INFO RunExecutable:129 - Flops / stencil call:  318
+15:13:51,851  INFO RunExecutable:129 - Stencil computations:  10485760
+15:13:51,851  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:13:51,851  INFO RunExecutable:129 - Total Flops:           3334471680
+15:13:51,851  INFO RunExecutable:129 - Seconds elapsed:       0.000091
+15:13:51,851  INFO RunExecutable:129 - Performance:           36708.104738 GFlop/s
+15:13:51,851  INFO RunExecutable:129 - Bandwidth utilization: 4753.417713 GB/s
+15:13:51,851  INFO RunExecutable:129 - 242361.000000
+15:13:51,851  INFO RunExecutable:129 - 
+15:13:56,050  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 64, 8, 1, 8]...
+15:13:58,140  INFO RunExecutable:129 - Flops / stencil call:  318
+15:13:58,140  INFO RunExecutable:129 - Stencil computations:  10485760
+15:13:58,140  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:13:58,140  INFO RunExecutable:129 - Total Flops:           3334471680
+15:13:58,140  INFO RunExecutable:129 - Seconds elapsed:       0.479409
+15:13:58,140  INFO RunExecutable:129 - Performance:           6.955377 GFlop/s
+15:13:58,140  INFO RunExecutable:129 - Bandwidth utilization: 0.900668 GB/s
+15:13:58,141  INFO RunExecutable:129 - 1281445164.000000
+15:13:58,141  INFO RunExecutable:129 - 
+15:13:58,289  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 1, 16, 1, 8]...
+15:14:02,112  INFO RunExecutable:129 - Flops / stencil call:  318
+15:14:02,112  INFO RunExecutable:129 - Stencil computations:  10485760
+15:14:02,112  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:14:02,112  INFO RunExecutable:129 - Total Flops:           3334471680
+15:14:02,112  INFO RunExecutable:129 - Seconds elapsed:       1.807888
+15:14:02,112  INFO RunExecutable:129 - Performance:           1.844402 GFlop/s
+15:14:02,112  INFO RunExecutable:129 - Bandwidth utilization: 0.238836 GB/s
+15:14:02,112  INFO RunExecutable:129 - 4832434222.000000
+15:14:02,112  INFO RunExecutable:129 - 
+15:14:02,270  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 2, 16, 1, 8]...
+15:14:34,008  INFO RunExecutable:129 - Flops / stencil call:  318
+15:14:34,008  INFO RunExecutable:129 - Stencil computations:  10485760
+15:14:34,008  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:14:34,008  INFO RunExecutable:129 - Total Flops:           3334471680
+15:14:34,008  INFO RunExecutable:129 - Seconds elapsed:       30.106859
+15:14:34,008  INFO RunExecutable:129 - Performance:           0.110755 GFlop/s
+15:14:34,009  INFO RunExecutable:129 - Bandwidth utilization: 0.014342 GB/s
+15:14:34,009  INFO RunExecutable:129 - 80474778285.000000
+15:14:34,009  INFO RunExecutable:129 - 
+15:14:38,210  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 4, 16, 1, 8]...
+15:15:09,981  INFO RunExecutable:129 - Flops / stencil call:  318
+15:15:09,981  INFO RunExecutable:129 - Stencil computations:  10485760
+15:15:09,981  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:15:09,982  INFO RunExecutable:129 - Total Flops:           3334471680
+15:15:09,982  INFO RunExecutable:129 - Seconds elapsed:       30.081108
+15:15:09,982  INFO RunExecutable:129 - Performance:           0.110849 GFlop/s
+15:15:09,982  INFO RunExecutable:129 - Bandwidth utilization: 0.014354 GB/s
+15:15:09,982  INFO RunExecutable:129 - 80405945728.000000
+15:15:09,982  INFO RunExecutable:129 - 
+15:15:14,192  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 8, 16, 1, 8]...
+15:15:45,748  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:15:45,748  INFO RunExecutable:129 - Flops / stencil call:  318
+15:15:45,748  INFO RunExecutable:129 - Stencil computations:  10485760
+15:15:45,748  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:15:45,748  INFO RunExecutable:129 - Total Flops:           3334471680
+15:15:45,748  INFO RunExecutable:129 - Seconds elapsed:       0.000094
+15:15:45,748  INFO RunExecutable:129 - Performance:           35496.923618 GFlop/s
+15:15:45,748  INFO RunExecutable:129 - Bandwidth utilization: 4596.579058 GB/s
+15:15:45,748  INFO RunExecutable:129 - 252121.000000
+15:15:45,748  INFO RunExecutable:129 - 
+15:15:49,946  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 16, 16, 1, 8]...
+15:16:21,470  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:16:21,471  INFO RunExecutable:129 - Flops / stencil call:  318
+15:16:21,471  INFO RunExecutable:129 - Stencil computations:  10485760
+15:16:21,471  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:16:21,471  INFO RunExecutable:129 - Total Flops:           3334471680
+15:16:21,471  INFO RunExecutable:129 - Seconds elapsed:       0.000096
+15:16:21,471  INFO RunExecutable:129 - Performance:           34790.517177 GFlop/s
+15:16:21,471  INFO RunExecutable:129 - Bandwidth utilization: 4505.104848 GB/s
+15:16:21,471  INFO RunExecutable:129 - 255899.000000
+15:16:21,472  INFO RunExecutable:129 - 
+15:16:25,673  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 32, 16, 1, 8]...
+15:16:27,832  INFO RunExecutable:129 - Flops / stencil call:  318
+15:16:27,832  INFO RunExecutable:129 - Stencil computations:  10485760
+15:16:27,832  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:16:27,832  INFO RunExecutable:129 - Total Flops:           3334471680
+15:16:27,832  INFO RunExecutable:129 - Seconds elapsed:       0.501046
+15:16:27,832  INFO RunExecutable:129 - Performance:           6.655022 GFlop/s
+15:16:27,832  INFO RunExecutable:129 - Bandwidth utilization: 0.861774 GB/s
+15:16:27,832  INFO RunExecutable:129 - 1339282095.000000
+15:16:27,832  INFO RunExecutable:129 - 
+15:16:27,982  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 64, 16, 1, 8]...
+15:16:29,228  INFO RunExecutable:129 - CUDA Error [Initialization]: too many resources requested for launch.
+15:16:29,228  INFO RunExecutable:129 - CUDA Error [Stencil]: too many resources requested for launch.
+15:16:29,228  INFO RunExecutable:129 - Flops / stencil call:  318
+15:16:29,228  INFO RunExecutable:129 - Stencil computations:  10485760
+15:16:29,228  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:16:29,229  INFO RunExecutable:129 - Total Flops:           3334471680
+15:16:29,229  INFO RunExecutable:129 - Seconds elapsed:       0.000139
+15:16:29,229  INFO RunExecutable:129 - Performance:           23989.344606 GFlop/s
+15:16:29,229  INFO RunExecutable:129 - Bandwidth utilization: 3106.435933 GB/s
+15:16:29,229  INFO RunExecutable:129 - 370601.000000
+15:16:29,229  INFO RunExecutable:129 - 
+15:16:29,381  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 1, 32, 1, 8]...
+15:17:01,056  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:17:01,056  INFO RunExecutable:129 - Flops / stencil call:  318
+15:17:01,056  INFO RunExecutable:129 - Stencil computations:  10485760
+15:17:01,056  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:17:01,056  INFO RunExecutable:129 - Total Flops:           3334471680
+15:17:01,056  INFO RunExecutable:129 - Seconds elapsed:       0.000098
+15:17:01,056  INFO RunExecutable:129 - Performance:           34028.681035 GFlop/s
+15:17:01,056  INFO RunExecutable:129 - Bandwidth utilization: 4406.452917 GB/s
+15:17:01,056  INFO RunExecutable:129 - 261387.000000
+15:17:01,057  INFO RunExecutable:129 - 
+15:17:05,263  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 2, 32, 1, 8]...
+15:17:45,962  INFO RunExecutable:129 - Flops / stencil call:  318
+15:17:45,963  INFO RunExecutable:129 - Stencil computations:  10485760
+15:17:45,963  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:17:45,963  INFO RunExecutable:129 - Total Flops:           3334471680
+15:17:45,963  INFO RunExecutable:129 - Seconds elapsed:       38.877421
+15:17:45,963  INFO RunExecutable:129 - Performance:           0.085769 GFlop/s
+15:17:45,963  INFO RunExecutable:129 - Bandwidth utilization: 0.011106 GB/s
+15:17:45,963  INFO RunExecutable:129 - 103918239070.000000
+15:17:45,964  INFO RunExecutable:129 - 
+15:17:50,162  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 4, 32, 1, 8]...
+15:18:21,768  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:18:21,768  INFO RunExecutable:129 - Flops / stencil call:  318
+15:18:21,768  INFO RunExecutable:129 - Stencil computations:  10485760
+15:18:21,768  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:18:21,768  INFO RunExecutable:129 - Total Flops:           3334471680
+15:18:21,769  INFO RunExecutable:129 - Seconds elapsed:       0.000093
+15:18:21,769  INFO RunExecutable:129 - Performance:           35860.994629 GFlop/s
+15:18:21,769  INFO RunExecutable:129 - Bandwidth utilization: 4643.723459 GB/s
+15:18:21,769  INFO RunExecutable:129 - 248474.000000
+15:18:21,769  INFO RunExecutable:129 - 
+15:18:25,988  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 8, 32, 1, 8]...
+15:18:27,617  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:18:27,617  INFO RunExecutable:129 - Flops / stencil call:  318
+15:18:27,617  INFO RunExecutable:129 - Stencil computations:  10485760
+15:18:27,617  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:18:27,618  INFO RunExecutable:129 - Total Flops:           3334471680
+15:18:27,618  INFO RunExecutable:129 - Seconds elapsed:       0.000091
+15:18:27,618  INFO RunExecutable:129 - Performance:           36708.104738 GFlop/s
+15:18:27,618  INFO RunExecutable:129 - Bandwidth utilization: 4753.417713 GB/s
+15:18:27,618  INFO RunExecutable:129 - 241733.000000
+15:18:27,618  INFO RunExecutable:129 - 
+15:18:27,814  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 16, 32, 1, 8]...
+15:18:59,373  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:18:59,373  INFO RunExecutable:129 - Flops / stencil call:  318
+15:18:59,373  INFO RunExecutable:129 - Stencil computations:  10485760
+15:18:59,373  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:18:59,373  INFO RunExecutable:129 - Total Flops:           3334471680
+15:18:59,373  INFO RunExecutable:129 - Seconds elapsed:       0.000138
+15:18:59,373  INFO RunExecutable:129 - Performance:           24155.074102 GFlop/s
+15:18:59,373  INFO RunExecutable:129 - Bandwidth utilization: 3127.896630 GB/s
+15:18:59,373  INFO RunExecutable:129 - 369072.000000
+15:18:59,373  INFO RunExecutable:129 - 
+15:19:03,582  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 32, 32, 1, 8]...
+15:19:04,827  INFO RunExecutable:129 - CUDA Error [Initialization]: too many resources requested for launch.
+15:19:04,828  INFO RunExecutable:129 - CUDA Error [Stencil]: too many resources requested for launch.
+15:19:04,830  INFO RunExecutable:129 - Flops / stencil call:  318
+15:19:04,830  INFO RunExecutable:129 - Stencil computations:  10485760
+15:19:04,830  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:19:04,830  INFO RunExecutable:129 - Total Flops:           3334471680
+15:19:04,830  INFO RunExecutable:129 - Seconds elapsed:       0.000140
+15:19:04,830  INFO RunExecutable:129 - Performance:           23825.873774 GFlop/s
+15:19:04,830  INFO RunExecutable:129 - Bandwidth utilization: 3085.267715 GB/s
+15:19:04,830  INFO RunExecutable:129 - 371396.000000
+15:19:04,830  INFO RunExecutable:129 - 
+15:19:04,982  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 1, 64, 1, 8]...
+15:19:38,081  INFO RunExecutable:129 - Flops / stencil call:  318
+15:19:38,081  INFO RunExecutable:129 - Stencil computations:  10485760
+15:19:38,081  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:19:38,082  INFO RunExecutable:129 - Total Flops:           3334471680
+15:19:38,082  INFO RunExecutable:129 - Seconds elapsed:       30.971652
+15:19:38,082  INFO RunExecutable:129 - Performance:           0.107662 GFlop/s
+15:19:38,082  INFO RunExecutable:129 - Bandwidth utilization: 0.013941 GB/s
+15:19:38,082  INFO RunExecutable:129 - 82786344640.000000
+15:19:38,082  INFO RunExecutable:129 - 
+15:19:42,289  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 2, 64, 1, 8]...
+15:20:14,051  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+15:20:14,052  INFO RunExecutable:129 - Flops / stencil call:  318
+15:20:14,052  INFO RunExecutable:129 - Stencil computations:  10485760
+15:20:14,052  INFO RunExecutable:129 - Bytes transferred:     431788480
+15:20:14,052  INFO RunExecutable:129 - Total Flops:           3334471680
+15:20:14,052  INFO RunExecutable:129 - Seconds elapsed:       0.000098
+15:20:14,052  INFO RunExecutable:129 - Performance:           34028.681035 GFlop/s
+15:20:14,052  INFO RunExecutable:129 - Bandwidth utilization: 4406.452917 GB/s
+15:20:14,052  INFO RunExecutable:129 - 262631.000000
+15:20:14,052  INFO RunExecutable:129 - 
+15:20:18,272  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Tricubic/./bench, 128, 128, 128, 4, 64, 1, 8]...
+15:27:38,762  INFO RunExecutable:129 - 

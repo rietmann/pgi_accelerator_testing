@@ -1,0 +1,37 @@
+10:17:54,580  INFO StandaloneAutotuner:249 - Using optimizer: Exhaustive search
+10:17:54,586  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl1_Gradient_Naive/./bench, 128, 128, 128, 1]...
+10:17:55,969  INFO RunExecutable:129 - Flops / stencil call:  6
+10:17:55,972  INFO RunExecutable:129 - Stencil computations:  10485760
+10:17:55,972  INFO RunExecutable:129 - Bytes transferred:     171828480
+10:17:55,972  INFO RunExecutable:129 - Total Flops:           62914560
+10:17:55,972  INFO RunExecutable:129 - Seconds elapsed:       0.193052
+10:17:55,972  INFO RunExecutable:129 - Performance:           0.325894 GFlop/s
+10:17:55,972  INFO RunExecutable:129 - Bandwidth utilization: 0.890063 GB/s
+10:17:55,972  INFO RunExecutable:129 - 515921822.000000
+10:17:55,972  INFO RunExecutable:129 - 
+10:17:55,972  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl1_Gradient_Naive/./bench, 128, 128, 128, 2]...
+10:17:56,480  INFO RunExecutable:129 - CUDA Error [Initialization]: unspecified launch failure.
+10:17:56,481  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+10:17:56,481  INFO RunExecutable:129 - Flops / stencil call:  6
+10:17:56,481  INFO RunExecutable:129 - Stencil computations:  10485760
+10:17:56,483  INFO RunExecutable:129 - Bytes transferred:     171828480
+10:17:56,483  INFO RunExecutable:129 - Total Flops:           62914560
+10:17:56,483  INFO RunExecutable:129 - Seconds elapsed:       0.000088
+10:17:56,483  INFO RunExecutable:129 - Performance:           715.129514 GFlop/s
+10:17:56,483  INFO RunExecutable:129 - Bandwidth utilization: 1953.118919 GB/s
+10:17:56,483  INFO RunExecutable:129 - 233953.000000
+10:17:56,483  INFO RunExecutable:129 - 
+10:17:56,527  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl1_Gradient_Naive/./bench, 128, 128, 128, 4]...
+10:17:56,830  INFO RunExecutable:129 - CUDA Error [Initialization]: unspecified launch failure.
+10:17:56,830  INFO RunExecutable:129 - CUDA Error [Stencil]: unspecified launch failure.
+10:17:56,830  INFO RunExecutable:129 - Flops / stencil call:  6
+10:17:56,830  INFO RunExecutable:129 - Stencil computations:  10485760
+10:17:56,830  INFO RunExecutable:129 - Bytes transferred:     171828480
+10:17:56,830  INFO RunExecutable:129 - Total Flops:           62914560
+10:17:56,830  INFO RunExecutable:129 - Seconds elapsed:       0.000089
+10:17:56,830  INFO RunExecutable:129 - Performance:           707.460565 GFlop/s
+10:17:56,831  INFO RunExecutable:129 - Bandwidth utilization: 1932.173944 GB/s
+10:17:56,831  INFO RunExecutable:129 - 235493.000000
+10:17:56,831  INFO RunExecutable:129 - 
+128 128 128 2 
+233953.0

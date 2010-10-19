@@ -1,0 +1,234 @@
+15:34:36,375  INFO StandaloneAutotuner:155 - ./bench 128 128 128 1:*2:64 1:*2:64 1:*2:64 1:*2:16 C$4*$5*$6<=1024 C$4*$5*$6>=8
+15:34:36,390  INFO StandaloneAutotuner:251 - Using optimizer: Exhaustive search
+15:34:36,447  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 8, 1, 1, 1]...
+15:34:37,742  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:37,742  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:37,742  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:37,743  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:37,743  INFO RunExecutable:129 - Seconds elapsed:       0.043921
+15:34:37,743  INFO RunExecutable:129 - Performance:           5.252311 GFlop/s
+15:34:37,743  INFO RunExecutable:129 - Bandwidth utilization: 4.303385 GB/s
+15:34:37,743  INFO RunExecutable:129 - 117398998.000000
+15:34:37,743  INFO RunExecutable:129 - 
+15:34:37,894  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 16, 1, 1, 1]...
+15:34:39,166  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:39,166  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:39,166  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:39,168  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:39,168  INFO RunExecutable:129 - Seconds elapsed:       0.023899
+15:34:39,168  INFO RunExecutable:129 - Performance:           9.652536 GFlop/s
+15:34:39,168  INFO RunExecutable:129 - Bandwidth utilization: 7.908630 GB/s
+15:34:39,168  INFO RunExecutable:129 - 63879348.000000
+15:34:39,169  INFO RunExecutable:129 - 
+15:34:39,320  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 32, 1, 1, 1]...
+15:34:40,575  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:40,575  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:40,576  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:40,576  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:40,576  INFO RunExecutable:129 - Seconds elapsed:       0.013165
+15:34:40,576  INFO RunExecutable:129 - Performance:           17.522732 GFlop/s
+15:34:40,576  INFO RunExecutable:129 - Bandwidth utilization: 14.356931 GB/s
+15:34:40,576  INFO RunExecutable:129 - 35189037.000000
+15:34:40,576  INFO RunExecutable:129 - 
+15:34:40,733  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 64, 1, 1, 1]...
+15:34:41,984  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:41,984  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:41,984  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:41,984  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:41,984  INFO RunExecutable:129 - Seconds elapsed:       0.008877
+15:34:41,984  INFO RunExecutable:129 - Performance:           25.986900 GFlop/s
+15:34:41,984  INFO RunExecutable:129 - Bandwidth utilization: 21.291893 GB/s
+15:34:41,984  INFO RunExecutable:129 - 23727825.000000
+15:34:41,985  INFO RunExecutable:129 - 
+15:34:42,158  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 4, 2, 1, 1]...
+15:34:43,468  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:43,468  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:43,468  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:43,468  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:43,469  INFO RunExecutable:129 - Seconds elapsed:       0.047029
+15:34:43,469  INFO RunExecutable:129 - Performance:           4.905200 GFlop/s
+15:34:43,469  INFO RunExecutable:129 - Bandwidth utilization: 4.018986 GB/s
+15:34:43,469  INFO RunExecutable:129 - 125708172.000000
+15:34:43,469  INFO RunExecutable:129 - 
+15:34:43,629  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 8, 2, 1, 1]...
+15:34:44,904  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:44,904  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:44,904  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:44,904  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:44,904  INFO RunExecutable:129 - Seconds elapsed:       0.025649
+15:34:44,904  INFO RunExecutable:129 - Performance:           8.994044 GFlop/s
+15:34:44,905  INFO RunExecutable:129 - Bandwidth utilization: 7.369106 GB/s
+15:34:44,905  INFO RunExecutable:129 - 68558113.000000
+15:34:44,905  INFO RunExecutable:129 - 
+15:34:45,056  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 16, 2, 1, 1]...
+15:34:46,312  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:46,312  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:46,312  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:46,312  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:46,312  INFO RunExecutable:129 - Seconds elapsed:       0.013536
+15:34:46,312  INFO RunExecutable:129 - Performance:           17.042488 GFlop/s
+15:34:46,313  INFO RunExecutable:129 - Bandwidth utilization: 13.963452 GB/s
+15:34:46,313  INFO RunExecutable:129 - 36182803.000000
+15:34:46,313  INFO RunExecutable:129 - 
+15:34:46,474  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 32, 2, 1, 1]...
+15:34:47,718  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:47,719  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:47,721  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:47,721  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:47,721  INFO RunExecutable:129 - Seconds elapsed:       0.008803
+15:34:47,721  INFO RunExecutable:129 - Performance:           26.205082 GFlop/s
+15:34:47,721  INFO RunExecutable:129 - Bandwidth utilization: 21.470656 GB/s
+15:34:47,721  INFO RunExecutable:129 - 23529609.000000
+15:34:47,721  INFO RunExecutable:129 - 
+15:34:47,881  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 64, 2, 1, 1]...
+15:34:49,130  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:49,131  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:49,131  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:49,131  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:49,131  INFO RunExecutable:129 - Seconds elapsed:       0.007380
+15:34:49,131  INFO RunExecutable:129 - Performance:           31.258326 GFlop/s
+15:34:49,131  INFO RunExecutable:129 - Bandwidth utilization: 25.610940 GB/s
+15:34:49,131  INFO RunExecutable:129 - 19727283.000000
+15:34:49,131  INFO RunExecutable:129 - 
+15:34:49,306  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 2, 4, 1, 1]...
+15:34:50,625  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:50,625  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:50,625  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:50,625  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:50,625  INFO RunExecutable:129 - Seconds elapsed:       0.053879
+15:34:50,625  INFO RunExecutable:129 - Performance:           4.281587 GFlop/s
+15:34:50,625  INFO RunExecutable:129 - Bandwidth utilization: 3.508041 GB/s
+15:34:50,625  INFO RunExecutable:129 - 144016133.000000
+15:34:50,625  INFO RunExecutable:129 - 
+15:34:50,783  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 4, 4, 1, 1]...
+15:34:52,057  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:52,057  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:52,057  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:52,057  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:52,057  INFO RunExecutable:129 - Seconds elapsed:       0.029461
+15:34:52,057  INFO RunExecutable:129 - Performance:           7.830265 GFlop/s
+15:34:52,058  INFO RunExecutable:129 - Bandwidth utilization: 6.415585 GB/s
+15:34:52,058  INFO RunExecutable:129 - 78748041.000000
+15:34:52,058  INFO RunExecutable:129 - 
+15:34:52,223  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 8, 4, 1, 1]...
+15:34:53,477  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:53,478  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:53,478  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:53,478  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:53,478  INFO RunExecutable:129 - Seconds elapsed:       0.015110
+15:34:53,478  INFO RunExecutable:129 - Performance:           15.267139 GFlop/s
+15:34:53,478  INFO RunExecutable:129 - Bandwidth utilization: 12.508853 GB/s
+15:34:53,478  INFO RunExecutable:129 - 40389280.000000
+15:34:53,478  INFO RunExecutable:129 - 
+15:34:53,633  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 16, 4, 1, 1]...
+15:34:54,882  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:54,882  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:54,883  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:54,883  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:54,883  INFO RunExecutable:129 - Seconds elapsed:       0.009380
+15:34:54,883  INFO RunExecutable:129 - Performance:           24.593824 GFlop/s
+15:34:54,883  INFO RunExecutable:129 - Bandwidth utilization: 20.150502 GB/s
+15:34:54,883  INFO RunExecutable:129 - 25071816.000000
+15:34:54,883  INFO RunExecutable:129 - 
+15:34:55,044  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 32, 4, 1, 1]...
+15:34:56,293  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:56,293  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:56,293  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:56,293  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:56,293  INFO RunExecutable:129 - Seconds elapsed:       0.007772
+15:34:56,293  INFO RunExecutable:129 - Performance:           29.681889 GFlop/s
+15:34:56,293  INFO RunExecutable:129 - Bandwidth utilization: 24.319315 GB/s
+15:34:56,294  INFO RunExecutable:129 - 20774951.000000
+15:34:56,294  INFO RunExecutable:129 - 
+15:34:56,455  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 64, 4, 1, 1]...
+15:34:57,705  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:57,705  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:57,705  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:57,705  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:57,705  INFO RunExecutable:129 - Seconds elapsed:       0.007719
+15:34:57,705  INFO RunExecutable:129 - Performance:           29.885416 GFlop/s
+15:34:57,706  INFO RunExecutable:129 - Bandwidth utilization: 24.486071 GB/s
+15:34:57,706  INFO RunExecutable:129 - 20632297.000000
+15:34:57,706  INFO RunExecutable:129 - 
+15:34:57,868  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 1, 8, 1, 1]...
+15:34:59,209  INFO RunExecutable:129 - Flops / stencil call:  22
+15:34:59,209  INFO RunExecutable:129 - Stencil computations:  10485760
+15:34:59,209  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:34:59,209  INFO RunExecutable:129 - Total Flops:           230686720
+15:34:59,209  INFO RunExecutable:129 - Seconds elapsed:       0.073282
+15:34:59,209  INFO RunExecutable:129 - Performance:           3.147931 GFlop/s
+15:34:59,210  INFO RunExecutable:129 - Bandwidth utilization: 2.579200 GB/s
+15:34:59,210  INFO RunExecutable:129 - 195882557.000000
+15:34:59,210  INFO RunExecutable:129 - 
+15:34:59,367  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 2, 8, 1, 1]...
+15:35:00,658  INFO RunExecutable:129 - Flops / stencil call:  22
+15:35:00,658  INFO RunExecutable:129 - Stencil computations:  10485760
+15:35:00,658  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:35:00,658  INFO RunExecutable:129 - Total Flops:           230686720
+15:35:00,658  INFO RunExecutable:129 - Seconds elapsed:       0.039032
+15:35:00,659  INFO RunExecutable:129 - Performance:           5.910197 GFlop/s
+15:35:00,659  INFO RunExecutable:129 - Bandwidth utilization: 4.842413 GB/s
+15:35:00,659  INFO RunExecutable:129 - 104330450.000000
+15:35:00,659  INFO RunExecutable:129 - 
+15:35:00,829  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 4, 8, 1, 1]...
+15:35:02,099  INFO RunExecutable:129 - Flops / stencil call:  22
+15:35:02,099  INFO RunExecutable:129 - Stencil computations:  10485760
+15:35:02,100  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:35:02,100  INFO RunExecutable:129 - Total Flops:           230686720
+15:35:02,100  INFO RunExecutable:129 - Seconds elapsed:       0.017700
+15:35:02,100  INFO RunExecutable:129 - Performance:           13.033004 GFlop/s
+15:35:02,100  INFO RunExecutable:129 - Bandwidth utilization: 10.678354 GB/s
+15:35:02,100  INFO RunExecutable:129 - 47311084.000000
+15:35:02,100  INFO RunExecutable:129 - 
+15:35:02,262  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 8, 8, 1, 1]...
+15:35:03,517  INFO RunExecutable:129 - Flops / stencil call:  22
+15:35:03,517  INFO RunExecutable:129 - Stencil computations:  10485760
+15:35:03,517  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:35:03,517  INFO RunExecutable:129 - Total Flops:           230686720
+15:35:03,517  INFO RunExecutable:129 - Seconds elapsed:       0.010886
+15:35:03,517  INFO RunExecutable:129 - Performance:           21.190763 GFlop/s
+15:35:03,517  INFO RunExecutable:129 - Bandwidth utilization: 17.362265 GB/s
+15:35:03,517  INFO RunExecutable:129 - 29097162.000000
+15:35:03,518  INFO RunExecutable:129 - 
+15:35:03,674  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 16, 8, 1, 1]...
+15:35:04,925  INFO RunExecutable:129 - Flops / stencil call:  22
+15:35:04,925  INFO RunExecutable:129 - Stencil computations:  10485760
+15:35:04,925  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:35:04,926  INFO RunExecutable:129 - Total Flops:           230686720
+15:35:04,926  INFO RunExecutable:129 - Seconds elapsed:       0.007883
+15:35:04,926  INFO RunExecutable:129 - Performance:           29.263557 GFlop/s
+15:35:04,926  INFO RunExecutable:129 - Bandwidth utilization: 23.976562 GB/s
+15:35:04,926  INFO RunExecutable:129 - 21071191.000000
+15:35:04,926  INFO RunExecutable:129 - 
+15:35:05,087  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 32, 8, 1, 1]...
+15:35:06,336  INFO RunExecutable:129 - Flops / stencil call:  22
+15:35:06,336  INFO RunExecutable:129 - Stencil computations:  10485760
+15:35:06,336  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:35:06,336  INFO RunExecutable:129 - Total Flops:           230686720
+15:35:06,336  INFO RunExecutable:129 - Seconds elapsed:       0.007811
+15:35:06,336  INFO RunExecutable:129 - Performance:           29.533308 GFlop/s
+15:35:06,336  INFO RunExecutable:129 - Bandwidth utilization: 24.197578 GB/s
+15:35:06,336  INFO RunExecutable:129 - 20878951.000000
+15:35:06,336  INFO RunExecutable:129 - 
+15:35:06,504  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 64, 8, 1, 1]...
+15:35:07,748  INFO RunExecutable:129 - Flops / stencil call:  22
+15:35:07,749  INFO RunExecutable:129 - Stencil computations:  10485760
+15:35:07,749  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:35:07,749  INFO RunExecutable:129 - Total Flops:           230686720
+15:35:07,749  INFO RunExecutable:129 - Seconds elapsed:       0.007758
+15:35:07,749  INFO RunExecutable:129 - Performance:           29.735709 GFlop/s
+15:35:07,749  INFO RunExecutable:129 - Bandwidth utilization: 24.363411 GB/s
+15:35:07,749  INFO RunExecutable:129 - 20737923.000000
+15:35:07,749  INFO RunExecutable:129 - 
+15:35:07,912  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 1, 16, 1, 1]...
+15:35:09,235  INFO RunExecutable:129 - Flops / stencil call:  22
+15:35:09,236  INFO RunExecutable:129 - Stencil computations:  10485760
+15:35:09,236  INFO RunExecutable:129 - Bytes transferred:     189008960
+15:35:09,236  INFO RunExecutable:129 - Total Flops:           230686720
+15:35:09,236  INFO RunExecutable:129 - Seconds elapsed:       0.062961
+15:35:09,236  INFO RunExecutable:129 - Performance:           3.663970 GFlop/s
+15:35:09,236  INFO RunExecutable:129 - Bandwidth utilization: 3.002007 GB/s
+15:35:09,236  INFO RunExecutable:129 - 168292996.000000
+15:35:09,236  INFO RunExecutable:129 - 
+15:35:09,396  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Bl2_Upstream/./bench, 128, 128, 128, 2, 16, 1, 1]...
+15:54:29,941  INFO RunExecutable:129 - 

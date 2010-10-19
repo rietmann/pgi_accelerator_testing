@@ -1,0 +1,40 @@
+Flops / stencil call:  16
+Stencil computations:  10485760
+Bytes transferred:     465429760
+Total Flops:           167772160
+Seconds elapsed:       0.234596
+Performance:           0.715153 GFlop/s
+Bandwidth utilization: 1.983963 GB/s
+626921956.000000
+Flops / stencil call:  16
+Stencil computations:  10485760
+Bytes transferred:     465429760
+Total Flops:           167772160
+Seconds elapsed:       0.168067
+Performance:           0.998246 GFlop/s
+Bandwidth utilization: 2.769311 GB/s
+449130984.000000
+Flops / stencil call:  16
+Stencil computations:  10485760
+Bytes transferred:     465429760
+Total Flops:           167772160
+Seconds elapsed:       0.141758
+Performance:           1.183511 GFlop/s
+Bandwidth utilization: 3.283271 GB/s
+378827497.000000
+Flops / stencil call:  16
+Stencil computations:  10485760
+Bytes transferred:     465429760
+Total Flops:           167772160
+Seconds elapsed:       0.177353
+Performance:           0.945978 GFlop/s
+Bandwidth utilization: 2.624311 GB/s
+473945559.000000
+Flops / stencil call:  16
+Stencil computations:  10485760
+Bytes transferred:     465429760
+Total Flops:           167772160
+Seconds elapsed:       0.631286
+Performance:           0.265763 GFlop/s
+Bandwidth utilization: 0.737273 GB/s
+1687014041.000000

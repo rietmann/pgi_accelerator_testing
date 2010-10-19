@@ -1,0 +1,7 @@
+15:28:37,099  INFO StandaloneAutotuner:155 - ./bench 128 128 128 1:*2:64 1:*2:64 1:*2:64 1:*2:16 C$4*$5*$6<=1024
+15:28:37,114  INFO StandaloneAutotuner:251 - Using optimizer: Exhaustive search
+15:28:37,162  INFO RunExecutable:107 - Executing [/home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Upstream_Naive/./bench, 128, 128, 128, 1, 1, 1, 1]...
+15:28:37,180  INFO RunExecutable:129 - Wrong number of parameters. Syntax:
+15:28:37,180  INFO RunExecutable:129 - /home/christen/workspace/PatusBenchmarkSuiteMod/GPU_Upstream_Naive/./bench <x_max> <y_max> <z_max>
+15:28:37,180  INFO RunExecutable:129 - 
+15:28:37,181 ERROR StandaloneAutotuner:103 - For input string: "."
